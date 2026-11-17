@@ -1,0 +1,1 @@
+/* assets/icons/ — aquí irán el favicon y el sprite de iconos (Fase 5). */

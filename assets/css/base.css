@@ -1,0 +1,51 @@
+/* =====================================================================
+   base.css — Variables de diseño (colores y tipografías), reset y texto.
+   Para cambiar colores o fuentes del sitio completo, edita :root.
+   ===================================================================== */
+:root{
+  /* Colores extraídos del logo (Fase 3, aprobados) */
+  --negro:#0B0705;
+  --superficie:#17110D;
+  --superficie-2:#211912;
+  --borde:#3A2B1D;
+  --cafe:#543517;
+  --oro-profundo:#9C6C3C;   /* solo decoración, NO texto */
+  --oro:#D8A164;
+  --oro-claro:#FED294;
+  --crema:#FEE3AE;
+  --texto:#F3EADB;
+  --texto-suave:#BFB1A0;
+  --whatsapp:#25D366;
+  --gradiente-oro:linear-gradient(135deg,#B8844A 0%,#D8A164 45%,#FED294 100%);
+
+  /* Tipografías: DM sans (títulos) + Inter (texto) */
+  --fuente-titulo:'DM sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --fuente-texto:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+
+  --radio:14px;
+  --radio-sm:10px;
+  --max:1160px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--negro);color:var(--texto);
+  font-family:var(--fuente-texto);font-size:1rem;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* DM sans es más ancha que una serifa: tamaños y espaciado ajustados */
+h1,h2,h3{font-family:var(--fuente-titulo);font-weight:600;line-height:1;color:var(--crema);letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,4.6vw,3.2rem)}
+h2{font-size:clamp(1.5rem,3.2vw,2.3rem)}
+h3{font-size:1.15rem}
+
+:focus-visible{outline:3px solid var(--oro-claro);outline-offset:3px;border-radius:6px}
+.wrap{width:min(100% - 2rem,var(--max));margin-inline:auto}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

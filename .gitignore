@@ -1,0 +1,7 @@
+# Archivos que Git NO debe guardar
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+*.log
+*.tmp

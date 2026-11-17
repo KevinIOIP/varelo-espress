@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varelo Espress · Prueba del entorno</title>
+
+  <!-- Google Fonts: Montserrat (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <style>
+    /* Estilos SOLO de esta página de prueba (se borra en la Fase 5) */
+    main{padding:3rem 0}
+    img.logo{width:140px;margin-bottom:1.5rem}
+    ul{list-style:none;margin-top:1.5rem;display:grid;gap:.6rem;max-width:560px}
+    li{padding:.8rem 1rem;border:1px solid var(--borde);border-radius:var(--radio-sm);background:var(--superficie)}
+    li.ok::before{content:"✔ ";color:var(--whatsapp)}
+    li.fallo{border-color:#ff7a62}
+    li.fallo::before{content:"✖ ";color:#ff7a62}
+    p.nota{color:var(--texto-suave);margin-top:1rem;max-width:56ch}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <img class="logo" src="assets/img/logo-varelo.webp" alt="Logo de Varelo Espress" width="140" height="144">
+    <h1>Varelo Espress</h1>
+    <p class="nota">Página de prueba de la Fase 4. Si ves los cinco puntos en verde, tu entorno está listo.</p>
+    <ul id="chequeo" aria-live="polite"></ul>
+    <p class="nota">Si el punto de la tipografía sale rojo pero estás sin internet, es normal: las fuentes vienen de Google Fonts.</p>
+  </main>
+
+  <!-- Orden importante: primero la configuración -->
+  <script src="assets/js/config.js"></script>
+  <script>
+    (function () {
+      var lista = document.getElementById('chequeo');
+      function agregar(ok, texto) {
+        var li = document.createElement('li');
+        li.className = ok ? 'ok' : 'fallo';
+        li.textContent = texto;            // textContent: nunca insertamos HTML
+        lista.appendChild(li);
+      }
+      // 1. CSS cargado: leemos una variable definida en base.css
+      var css = getComputedStyle(document.documentElement).getPropertyValue('--oro').trim();
+      agregar(css === '#D8A164', 'CSS: base.css cargado (color oro ' + (css || 'no encontrado') + ')');
+      // 2. config.js cargado
+      var cfg = window.VARELO_CONFIG;
+      agregar(!!cfg, cfg ? 'JavaScript: config.js cargado (WhatsApp ' + cfg.whatsapp.numeroVisible + ')' : 'JavaScript: config.js NO se cargó');
+      // 3. Enlace de WhatsApp correcto
+      if (cfg) {
+        var url = 'https://wa.me/' + cfg.whatsapp.numero + '?text=' + encodeURIComponent('Hola, estoy probando el sitio de ' + cfg.empresa.nombre + ' & quiero información.');
+        agregar(url.indexOf('wa.me/573143406322') > -1, 'Enlace de WhatsApp generado y codificado correctamente');
+      }
+      // 4. Logo y tipografía (esperan a que termine de cargar)
+      window.addEventListener('load', function () {
+        var logo = document.querySelector('img.logo');
+        agregar(logo.complete && logo.naturalWidth > 0, 'Imagen: logo cargado desde assets/img');
+        // load() devuelve las fuentes realmente cargadas; lista vacía = no se pudo descargar
+        var carga = document.fonts ? document.fonts.load('700 1rem Montserrat') : Promise.resolve([]);
+        carga.then(function (fuentes) {
+          agregar(fuentes.length > 0, 'Tipografía: Montserrat cargada desde Google Fonts');
+        }).catch(function () {
+          agregar(false, 'Tipografía: Montserrat no se pudo cargar');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
