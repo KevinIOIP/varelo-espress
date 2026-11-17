@@ -9,7 +9,7 @@
   --superficie-2:#211912;
   --borde:#3A2B1D;
   --cafe:#543517;
-  --oro-profundo:#9C6C3C;   /* solo decoración, NO texto */
+  --oro-profundo:#9C6C3C;   /* solo decoración, NO para texto */
   --oro:#D8A164;
   --oro-claro:#FED294;
   --crema:#FEE3AE;
@@ -25,10 +25,11 @@
   --radio:14px;
   --radio-sm:10px;
   --max:1160px;
+  --alto-header:72px;
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--alto-header) + 12px)}
 body{
   background:var(--negro);color:var(--texto);
   font-family:var(--fuente-texto);font-size:1rem;line-height:1.65;
@@ -36,16 +37,25 @@ body{
 }
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
 
-/* DM sans es más ancha que una serifa: tamaños y espaciado ajustados */
-h1,h2,h3{font-family:var(--fuente-titulo);font-weight:600;line-height:1;color:var(--crema);letter-spacing:-.01em}
+/* Montserrat es más ancha que una serifa: tamaños y espaciado ajustados */
+h1,h2,h3{font-family:var(--fuente-titulo);font-weight:650;line-height:1.2;color:var(--crema);letter-spacing:-.01em}
 h1{font-size:clamp(1.9rem,4.6vw,3.2rem)}
 h2{font-size:clamp(1.5rem,3.2vw,2.3rem)}
 h3{font-size:1.15rem}
 
 :focus-visible{outline:3px solid var(--oro-claro);outline-offset:3px;border-radius:6px}
+main:focus{outline:none}
+
 .wrap{width:min(100% - 2rem,var(--max));margin-inline:auto}
 
+/* Etiqueta pequeña en mayúsculas encima de los títulos */
+.eyebrow{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro);font-weight:600}
+
+/* Texto solo para lectores de pantalla */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
 @media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }

@@ -1,1 +1,1 @@
-/* forms.js — se desarrolla en la Fase 5. */
+/* forms.js — validación y armado de mensajes de los formularios. Se desarrolla con esas páginas (Fase 5). */

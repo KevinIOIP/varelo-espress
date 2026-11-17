@@ -1,1 +1,69 @@
-/* pages.css — estilos propios de cada página. Se desarrolla en la Fase 5. */
+/* =====================================================================
+   pages.css — Estilos propios de cada página.
+   Cada bloque lleva el nombre de la página a la que pertenece.
+   ===================================================================== */
+
+/* ===================== PÁGINA: INICIO ===================== */
+
+/* --- Hero: foto de fondo + degradado para que el texto se lea --- */
+.hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(520px,75vh,760px);overflow:hidden;background:var(--negro)}
+.hero__media{position:absolute;inset:0;z-index:-2}
+.hero__media img{width:100%;height:100%;object-fit:cover;object-position:72% center}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(90deg,var(--negro) 0%,rgba(11,7,5,.9) 30%,rgba(11,7,5,.35) 62%,rgba(11,7,5,0) 100%),
+  linear-gradient(0deg,var(--negro) 0%,rgba(11,7,5,0) 22%)}
+.hero__content{max-width:620px;padding:4rem 0}
+.hero h1{margin:1rem 0 1.2rem}
+.hero h1 em{font-style:normal;background:var(--gradiente-oro);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero__lead{color:var(--texto);opacity:.88;font-size:1.08rem;max-width:52ch}
+.hero__acciones{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem}
+.hero__puntos{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;margin-top:2rem;font-size:.92rem;color:var(--texto-suave)}
+.hero__puntos li{display:flex;align-items:center;gap:.5rem}
+.hero__puntos .ico{color:var(--oro);width:18px;height:18px}
+
+@media (max-width:767px){
+  .hero{min-height:0}
+  .hero::after{background:linear-gradient(180deg,rgba(11,7,5,.55) 0%,rgba(11,7,5,.82) 60%,var(--negro) 100%)}
+  .hero__media img{object-position:80% center}
+  .hero__content{padding:3.2rem 0 3rem}
+  .hero__acciones .btn{width:100%}
+}
+
+/* --- Secciones --- */
+.seccion{padding:4.5rem 0}
+@media (max-width:767px){.seccion{padding:3.2rem 0}}
+
+/* --- Servicios: 1 col (móvil) · 2 col (tablet) · 6 col (escritorio: 3 + 2) --- */
+.servicios{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media (min-width:640px){
+  .servicios{grid-template-columns:repeat(2,1fr)}
+  .servicios .card:last-child{grid-column:1/-1}
+  .servicios .card:last-child .card__media{aspect-ratio:2/1}
+}
+@media (min-width:1024px){
+  .servicios{grid-template-columns:repeat(6,1fr)}
+  .servicios .card{grid-column:span 2}
+  .servicios .card:nth-child(n+4){grid-column:span 3}
+  .servicios .card:nth-child(n+4) .card__media{aspect-ratio:2/1}
+}
+
+/* --- Cómo funciona (3 pasos) --- */
+.banda{background:linear-gradient(180deg,var(--superficie),var(--negro));border-block:1px solid var(--borde)}
+.pasos{display:grid;gap:1.25rem;grid-template-columns:1fr;counter-reset:paso}
+@media (min-width:768px){.pasos{grid-template-columns:repeat(3,1fr)}}
+.paso{position:relative;padding:1.6rem 1.5rem;border:1px solid var(--borde);border-radius:var(--radio);background:var(--superficie)}
+.paso__num{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;margin-bottom:1rem;background:var(--gradiente-oro);color:#1a1008;font:700 1.05rem var(--fuente-titulo)}
+.paso h3{margin-bottom:.5rem}
+.paso p{color:var(--texto-suave);font-size:.95rem}
+.pasos-nota{margin-top:1.5rem;display:flex;align-items:center;gap:.6rem;color:var(--texto-suave);font-size:.95rem}
+.pasos-nota .ico{color:var(--oro)}
+
+/* --- Marcas (texto, sin logos de terceros) --- */
+.marcas{display:flex;flex-wrap:wrap;gap:.7rem}
+.marcas li{padding:.6rem 1.15rem;border:1px solid var(--borde);border-radius:999px;color:var(--texto);font-size:.92rem;letter-spacing:.03em;background:var(--superficie)}
+
+/* --- Llamado final --- */
+.cta-final{text-align:center;background:radial-gradient(700px 260px at 50% 0%,rgba(216,161,100,.16),transparent 70%)}
+.cta-final h2{margin-bottom:1rem}
+.cta-final p{color:var(--texto-suave);max-width:54ch;margin:0 auto 1.8rem}
+@media (max-width:767px){.cta-final .btn{width:100%}}

@@ -3,70 +3,238 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Varelo Espress · Prueba del entorno</title>
+
+  <!-- SEO: título y descripción ÚNICOS por página -->
+  <title>Varelo Espress | Café, máquinas espresso, repuestos y servicio técnico en Bogotá</title>
+  <meta name="description" content="Varelo Espress en Bogotá: venta de café, alquiler y venta de máquinas espresso, repuestos y servicio técnico. Cotiza directamente por WhatsApp.">
+  <meta name="theme-color" content="#0B0705">
+
+  <!-- Open Graph (vista previa al compartir el enlace) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Varelo Espress">
+  <meta property="og:title" content="Varelo Espress | Café, máquinas espresso y servicio técnico">
+  <meta property="og:description" content="Venta de café, alquiler y venta de máquinas espresso, repuestos y servicio técnico en Bogotá.">
+  <!-- PENDIENTE (cuando exista el dominio): descomentar y poner la URL real.
+  <link rel="canonical" href="https://TU-DOMINIO/">
+  <meta property="og:url" content="https://TU-DOMINIO/">
+  <meta property="og:image" content="https://TU-DOMINIO/assets/img/logo-varelo.webp">
+  -->
+
+  <!-- Iconos de la pestaña -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
   <!-- Google Fonts: Montserrat (títulos) + Inter (texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
+  <!-- Estilos: el orden importa (base → componentes → página) -->
   <link rel="stylesheet" href="assets/css/base.css">
-  <style>
-    /* Estilos SOLO de esta página de prueba (se borra en la Fase 5) */
-    main{padding:3rem 0}
-    img.logo{width:140px;margin-bottom:1.5rem}
-    ul{list-style:none;margin-top:1.5rem;display:grid;gap:.6rem;max-width:560px}
-    li{padding:.8rem 1rem;border:1px solid var(--borde);border-radius:var(--radio-sm);background:var(--superficie)}
-    li.ok::before{content:"✔ ";color:var(--whatsapp)}
-    li.fallo{border-color:#ff7a62}
-    li.fallo::before{content:"✖ ";color:#ff7a62}
-    p.nota{color:var(--texto-suave);margin-top:1rem;max-width:56ch}
-  </style>
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Imagen principal: se pide cuanto antes (mejora la velocidad percibida) -->
+  <link rel="preload" as="image" href="assets/img/hero-inicio-1600.webp" imagesrcset="assets/img/hero-inicio-900.webp 900w, assets/img/hero-inicio-1600.webp 1600w" imagesizes="100vw">
+
+  <!-- Datos estructurados (Google). Los datos deben coincidir con config.js.
+       PENDIENTE: agregar "url", "sameAs" (redes) y "openingHours" cuando se confirmen. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Varelo Espress",
+    "description": "Venta de café, alquiler y venta de máquinas espresso, repuestos y servicio técnico.",
+    "telephone": "+573143406322",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" }
+  }
+  </script>
 </head>
-<body>
-  <main class="wrap">
-    <img class="logo" src="assets/img/logo-varelo.webp" alt="Logo de Varelo Espress" width="140" height="144">
-    <h1>Varelo Espress</h1>
-    <p class="nota">Página de prueba de la Fase 4. Si ves los cinco puntos en verde, tu entorno está listo.</p>
-    <ul id="chequeo" aria-live="polite"></ul>
-    <p class="nota">Si el punto de la tipografía sale rojo pero estás sin internet, es normal: las fuentes vienen de Google Fonts.</p>
+
+<body data-page="inicio">
+
+  <!-- Header: lo inserta layout.js. El <noscript> es el respaldo si JavaScript está apagado -->
+  <div id="site-header">
+    <noscript>
+      <nav aria-label="Principal" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="index.html">Inicio</a><a href="venta-de-cafe.html">Venta de café</a><a href="alquiler-de-maquinas.html">Alquiler</a><a href="venta-de-maquinas.html">Máquinas</a><a href="repuestos.html">Repuestos</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a>
+      </nav>
+    </noscript>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="hero__media">
+        <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia). Sin lazy: es lo primero que se ve. -->
+        <img src="assets/img/hero-inicio-1600.webp"
+             srcset="assets/img/hero-inicio-900.webp 900w, assets/img/hero-inicio-1600.webp 1600w"
+             sizes="100vw" width="1600" height="1067" fetchpriority="high"
+             alt="Máquina de espresso sirviendo un café con crema dorada sobre una barra de madera oscura">
+      </div>
+      <div class="wrap">
+        <div class="hero__content">
+          <p class="eyebrow">Bogotá, Colombia</p>
+          <h1 id="titulo-hero">El café y las máquinas que tu negocio <em>necesita</em>, con servicio experto</h1>
+          <p class="hero__lead">Venta de café, alquiler y venta de máquinas espresso, repuestos y servicio técnico. Cuéntanos qué necesitas y te respondemos directamente por WhatsApp.</p>
+          <div class="hero__acciones">
+            <!-- data-wa-message="" → usa el mensaje de la página definido en config.js -->
+            <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+            <a class="btn btn--borde" href="#servicios">Ver servicios</a>
+          </div>
+          <ul class="hero__puntos">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Atención directa por WhatsApp</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Bogotá, Colombia</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="seccion" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Lo que hacemos</p>
+          <h2 id="titulo-servicios">Todo para tu espacio de café</h2>
+          <p>Elige lo que necesitas y consulta por WhatsApp con el mensaje ya preparado.</p>
+        </div>
+
+        <!-- EJEMPLO: los 5 servicios provienen de los demos. Validar con el negocio. -->
+        <div class="servicios">
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/card-venta-cafe.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Granos de café tostado saliendo de un costal sobre una mesa de madera">
+              <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg></span>
+            </div>
+            <div class="card__body">
+              <h3><a class="card__link" href="venta-de-cafe.html">Venta de café</a></h3>
+              <p>Paquetes por libras y perfiles de tueste para tu negocio.</p>
+              <span class="card__more" aria-hidden="true">Ver café <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/card-alquiler-maquinas.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Máquina de espresso de dos grupos sobre una barra de cafetería">
+              <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            </div>
+            <div class="card__body">
+              <h3><a class="card__link" href="alquiler-de-maquinas.html">Alquiler de máquinas</a></h3>
+              <p>Planes de alquiler según la operación de tu negocio.</p>
+              <span class="card__more" aria-hidden="true">Ver planes <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/card-venta-maquinas.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Máquina de espresso profesional exhibida con iluminación dorada">
+              <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-machine"/></svg></span>
+            </div>
+            <div class="card__body">
+              <h3><a class="card__link" href="venta-de-maquinas.html">Venta de máquinas</a></h3>
+              <p>Catálogo de máquinas con filtros y consulta de disponibilidad.</p>
+              <span class="card__more" aria-hidden="true">Ver máquinas <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/card-repuestos.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Repuestos de máquina de espresso: filtros, empaques y piezas de latón">
+              <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg></span>
+            </div>
+            <div class="card__body">
+              <h3><a class="card__link" href="repuestos.html">Repuestos</a></h3>
+              <p>Busca por categoría y consulta por la pieza que necesitas.</p>
+              <span class="card__more" aria-hidden="true">Ver repuestos <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/card-servicio-tecnico.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Técnico con guantes revisando el grupo de una máquina de espresso con una llave">
+              <span class="card__icon"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            </div>
+            <div class="card__body">
+              <h3><a class="card__link" href="servicio-tecnico.html">Servicio técnico</a></h3>
+              <p>Solicita mantenimiento o reparación de tu máquina.</p>
+              <span class="card__more" aria-hidden="true">Solicitar servicio <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="seccion banda" aria-labelledby="titulo-pasos">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Así de simple</p>
+          <h2 id="titulo-pasos">Cómo contactarnos</h2>
+        </div>
+        <ol class="pasos">
+          <li class="paso" data-reveal>
+            <span class="paso__num" aria-hidden="true">1</span>
+            <h3>Explora</h3>
+            <p>Revisa el café, las máquinas, los repuestos y los servicios disponibles.</p>
+          </li>
+          <li class="paso" data-reveal>
+            <span class="paso__num" aria-hidden="true">2</span>
+            <h3>Elige</h3>
+            <p>Selecciona el producto o servicio que te interesa y presiona el botón de consulta.</p>
+          </li>
+          <li class="paso" data-reveal>
+            <span class="paso__num" aria-hidden="true">3</span>
+            <h3>Escríbenos</h3>
+            <p>Se abre WhatsApp con un mensaje ya preparado y continuamos la conversación ahí.</p>
+          </li>
+        </ol>
+        <p class="pasos-nota"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>No hay carrito ni pagos en línea: toda la atención es directa por WhatsApp.</p>
+      </div>
+    </section>
+
+    <!-- ============ MARCAS ============ -->
+    <!-- EJEMPLO: marcas tomadas de los demos. Reemplazar por las reales (ver CONTENIDO-PENDIENTE.md).
+         Solo texto: no usamos logos de terceros para no insinuar distribución autorizada. -->
+    <section class="seccion" aria-labelledby="titulo-marcas">
+      <div class="wrap">
+        <div class="sec-head" style="margin-bottom:1.4rem">
+          <p class="eyebrow">Marcas con las que trabajamos</p>
+          <h2 id="titulo-marcas">Equipos de referencia</h2>
+        </div>
+        <ul class="marcas" data-reveal>
+          <li>Rancilio</li><li>La Marzocco</li><li>Faema</li><li>Nuova Simonelli</li><li>Compak</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ LLAMADO FINAL ============ -->
+    <section class="seccion banda cta-final" aria-labelledby="titulo-cta">
+      <div class="wrap" data-reveal>
+        <h2 id="titulo-cta">¿Hablamos de lo que necesitas?</h2>
+        <p>Escríbenos y continuamos la conversación por WhatsApp.</p>
+        <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Orden importante: primero la configuración -->
-  <script src="assets/js/config.js"></script>
-  <script>
-    (function () {
-      var lista = document.getElementById('chequeo');
-      function agregar(ok, texto) {
-        var li = document.createElement('li');
-        li.className = ok ? 'ok' : 'fallo';
-        li.textContent = texto;            // textContent: nunca insertamos HTML
-        lista.appendChild(li);
-      }
-      // 1. CSS cargado: leemos una variable definida en base.css
-      var css = getComputedStyle(document.documentElement).getPropertyValue('--oro').trim();
-      agregar(css === '#D8A164', 'CSS: base.css cargado (color oro ' + (css || 'no encontrado') + ')');
-      // 2. config.js cargado
-      var cfg = window.VARELO_CONFIG;
-      agregar(!!cfg, cfg ? 'JavaScript: config.js cargado (WhatsApp ' + cfg.whatsapp.numeroVisible + ')' : 'JavaScript: config.js NO se cargó');
-      // 3. Enlace de WhatsApp correcto
-      if (cfg) {
-        var url = 'https://wa.me/' + cfg.whatsapp.numero + '?text=' + encodeURIComponent('Hola, estoy probando el sitio de ' + cfg.empresa.nombre + ' & quiero información.');
-        agregar(url.indexOf('wa.me/573143406322') > -1, 'Enlace de WhatsApp generado y codificado correctamente');
-      }
-      // 4. Logo y tipografía (esperan a que termine de cargar)
-      window.addEventListener('load', function () {
-        var logo = document.querySelector('img.logo');
-        agregar(logo.complete && logo.naturalWidth > 0, 'Imagen: logo cargado desde assets/img');
-        // load() devuelve las fuentes realmente cargadas; lista vacía = no se pudo descargar
-        var carga = document.fonts ? document.fonts.load('700 1rem Montserrat') : Promise.resolve([]);
-        carga.then(function (fuentes) {
-          agregar(fuentes.length > 0, 'Tipografía: Montserrat cargada desde Google Fonts');
-        }).catch(function () {
-          agregar(false, 'Tipografía: Montserrat no se pudo cargar');
-        });
-      });
-    })();
-  </script>
+  <!-- Footer: lo inserta layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts: el ORDEN importa. "defer" los ejecuta en orden cuando el HTML ya cargó. -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/icons/sprite.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
 </body>
 </html>
