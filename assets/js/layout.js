@@ -25,7 +25,7 @@
     { id: 'repuestos',etiqueta: 'Repuestos',        archivo: 'repuestos.html' },
     { id: 'servicio', etiqueta: 'Servicio técnico', archivo: 'servicio-tecnico.html' },
     { id: 'nosotros', etiqueta: 'Nosotros',         archivo: 'nosotros.html' },
-    { id: 'contacto', etiqueta: 'Contacto',         archivo: 'contacto.html' }
+    // { id: 'contacto', etiqueta: 'Contacto',         archivo: 'contacto.html' }
   ];
 
   var LOGO = 'assets/img/logo-varelo-160.webp';
@@ -72,7 +72,7 @@
       logo,
       el('span', { 'class': 'brand__text' }, [
         el('span', { 'class': 'brand__name', texto: cfg.empresa.nombre }),
-        el('span', { 'class': 'brand__tag', texto: 'Café & Máquinas' })
+        el('span', { 'class': 'brand__tag', texto: 'Pasión por el Café' })
       ])
     ]);
 

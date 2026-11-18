@@ -38,7 +38,7 @@ window.VARELO_CONFIG = {
     repuestos:"Hola, quisiera consultar por repuestos para mi máquina de espresso.",
     servicio: "Hola, quisiera solicitar servicio técnico para mi máquina de espresso.",
     nosotros: "Hola, quisiera conocer más sobre Varelo Espress.",
-    contacto: "Hola, quisiera comunicarme con Varelo Espress."
+    // contacto: "Hola, quisiera comunicarme con Varelo Espress."
   },
 
   sitio: {
