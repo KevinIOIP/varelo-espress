@@ -18,14 +18,14 @@
   --whatsapp:#25D366;
   --gradiente-oro:linear-gradient(135deg,#B8844A 0%,#D8A164 45%,#FED294 100%);
 
-  /* Tipografías: DM sans (títulos) + Inter (texto) */
-  --fuente-titulo:'DM sans',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --fuente-texto:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  /* Tipografías: Playfair Display (títulos) + Inter (texto) */
+  --fuente-titulo: 'Playfair Display', Georgia, serif;
+    --fuente-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --radio:14px;
-  --radio-sm:10px;
-  --max:1160px;
-  --alto-header:72px;
+  --radio: 14px;
+  --radio-sm: 10px;
+  --sombra: 0 10px 30px rgba(0, 0, 0, .45);
+  --max: 1160px;
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

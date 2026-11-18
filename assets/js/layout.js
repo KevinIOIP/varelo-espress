@@ -19,13 +19,12 @@
      Para agregar o renombrar una página, se hace aquí. */
   var PAGINAS = [
     { id: 'inicio',   etiqueta: 'Inicio',           archivo: 'index.html' },
-    { id: 'cafe',     etiqueta: 'Venta de café',    archivo: 'venta-de-cafe.html' },
+    { id: 'cafe',     etiqueta: 'Café',    archivo: 'venta-de-cafe.html' },
     { id: 'alquiler', etiqueta: 'Alquiler',         archivo: 'alquiler-de-maquinas.html' },
     { id: 'maquinas', etiqueta: 'Máquinas',         archivo: 'venta-de-maquinas.html' },
     { id: 'repuestos',etiqueta: 'Repuestos',        archivo: 'repuestos.html' },
     { id: 'servicio', etiqueta: 'Servicio técnico', archivo: 'servicio-tecnico.html' },
     { id: 'nosotros', etiqueta: 'Nosotros',         archivo: 'nosotros.html' },
-    // { id: 'contacto', etiqueta: 'Contacto',         archivo: 'contacto.html' }
   ];
 
   var LOGO = 'assets/img/logo-varelo-160.webp';
