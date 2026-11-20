@@ -72,7 +72,7 @@
       logo,
       el('span', { 'class': 'brand__text' }, [
         el('span', { 'class': 'brand__name', texto: cfg.empresa.nombre }),
-        el('span', { 'class': 'brand__tag', texto: 'Café & Máquinas' })
+        el('span', { 'class': 'brand__tag', texto: 'Pasión por el café' })
       ])
     ]);
 

@@ -43,3 +43,17 @@ Cada página debe llevar `<body data-page="...">` con su id (inicio, cafe, alqui
 | Repuestos | `repuestos.html` | pendiente |
 | Servicio técnico | `servicio-tecnico.html` | pendiente |
 | Nosotros | `nosotros.html` | pendiente |
+
+## Comercial — Alquiler (`alquiler-de-maquinas.html`)
+- [ ] Tamaños de 1, 2 y 3 grupos y su capacidad (50-70, 90-120 y 150+ bebidas por hora)
+- [ ] Voltajes: 110V y 220V; regla "3 grupos solo funciona a 220V" (assets/js/alquiler.js)
+- [ ] Rangos de tiempo (1-3, 4-6, 7-9 y 10-12+ meses): el demo traía "7-9" y "9-12+", que se cruzaban en el mes 9
+- [ ] 3 planes (Compact, Comercial, Alto Flujo): capacidades, calderas (11-15 L, más de 18 L), lanzas de vapor, tipo de molino
+- [ ] Etiqueta "El más popular" (Plan Comercial)
+- [ ] Qué incluye el alquiler: molino, instalación, calibración, capacitación, mantenimiento preventivo y correctivo
+- [ ] "Asistencia técnica prioritaria" (el demo decía 24/7; se quitó)
+- [ ] Equipo de respaldo / reemplazo (el demo decía "inmediato" y "sin costo adicional"; se quitó)
+- [ ] Tarifas preferenciales en contratos de 6 y 12 meses o más
+- [ ] Requisitos de agua y electricidad (preguntas frecuentes)
+- [ ] Se omitió "tecnología italiana" y "repuestos originales" del demo: confirmar si se pueden afirmar
+- [ ] Imagen `hero-alquiler-*.webp` (generada con IA)

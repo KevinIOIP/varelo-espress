@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción ÚNICOS por página -->
+  <title>Alquiler de máquinas de café espresso en Bogotá | Varelo Espress</title>
+  <meta name="description" content="Alquiler de máquinas de café espresso de 1, 2 y 3 grupos en Bogotá, con molino, instalación y mantenimiento. Configura tu plan y cotiza por WhatsApp.">
+  <meta name="theme-color" content="#0B0705">
+
+  <!-- Open Graph (vista previa al compartir el enlace) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Varelo Espress">
+  <meta property="og:title" content="Alquiler de máquinas de café espresso | Varelo Espress">
+  <meta property="og:description" content="Máquinas espresso de 1, 2 y 3 grupos con molino, instalación y mantenimiento. Cotiza por WhatsApp.">
+  <!-- PENDIENTE (cuando exista el dominio): descomentar y poner la URL real.
+  <link rel="canonical" href="https://TU-DOMINIO/alquiler-de-maquinas.html">
+  <meta property="og:url" content="https://TU-DOMINIO/alquiler-de-maquinas.html">
+  <meta property="og:image" content="https://TU-DOMINIO/assets/img/hero-alquiler-1600.webp">
+  -->
+
+  <!-- Iconos de la pestaña -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Google Fonts: Playfair Display (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600..700&display=swap" rel="stylesheet">
+
+  <!-- Estilos: el orden importa (base → componentes → página) -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Imagen principal: se pide cuanto antes -->
+  <link rel="preload" as="image" href="assets/img/hero-alquiler-1600.webp" imagesrcset="assets/img/hero-alquiler-900.webp 900w, assets/img/hero-alquiler-1600.webp 1600w" imagesizes="100vw">
+
+  <!-- Datos estructurados: ruta de navegación (BreadcrumbList).
+       PENDIENTE: agregar las URLs absolutas ("item") cuando exista el dominio.
+       No se agrega FAQPage mientras las respuestas sean de EJEMPLO. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio" },
+      { "@type": "ListItem", "position": 2, "name": "Alquiler de máquinas" }
+    ]
+  }
+  </script>
+</head>
+
+<body data-page="alquiler">
+
+  <!-- Header: lo inserta layout.js. El <noscript> es el respaldo si JavaScript está apagado -->
+  <div id="site-header">
+    <noscript>
+      <nav aria-label="Principal" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="index.html">Inicio</a><a href="cafe.html">Café</a><a href="alquiler-de-maquinas.html">Alquiler</a><a href="venta-de-maquinas.html">Máquinas</a><a href="repuestos.html">Repuestos</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a>
+      </nav>
+    </noscript>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--interna" aria-labelledby="titulo-hero">
+      <div class="hero__media">
+        <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia) -->
+        <img src="assets/img/hero-alquiler-1600.webp"
+             srcset="assets/img/hero-alquiler-900.webp 900w, assets/img/hero-alquiler-1600.webp 1600w"
+             sizes="100vw" width="1600" height="1067" fetchpriority="high"
+             alt="Máquina de espresso de dos grupos con molino sobre una barra de cafetería">
+      </div>
+      <div class="wrap">
+        <div class="hero__content">
+          <p class="eyebrow">Sin grandes inversiones iniciales</p>
+          <h1 id="titulo-hero">Alquiler de máquinas de café <em>profesionales</em></h1>
+          <!-- EJEMPLO: se omitió "tecnología italiana" del demo hasta confirmar la procedencia de los equipos -->
+          <p class="hero__lead">Equipa tu negocio con máquinas espresso de alto rendimiento. Incluye instalación, mantenimiento preventivo y molino profesional.</p>
+          <div class="hero__acciones">
+            <a class="btn btn--oro" href="#cotizador">Configurar alquiler <svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn--borde" href="#planes">Ver planes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFICIOS ============ -->
+    <!-- EJEMPLO: textos del demo, sin las afirmaciones absolutas ("100 %", "sin costo", "inmediata"). -->
+    <section class="seccion" aria-label="Beneficios del alquiler" style="padding-bottom:0">
+      <div class="wrap">
+        <div class="beneficios beneficios--4">
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <div><h3>Mantenimiento incluido</h3><p>Soporte técnico, repuestos y revisiones periódicas incluidos en el alquiler.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></span>
+            <div><h3>Instalación y capacitación</h3><p>Montaje en tu local y entrenamiento barista para tu personal.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg></span>
+            <div><h3>Molino profesional</h3><p>Los alquileres incluyen molino espresso dosificador listo para usar.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <div><h3>Equipo de respaldo</h3><p>Equipo de reemplazo ante eventuales fallas técnicas complejas.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONFIGURADOR DE ALQUILER ============ -->
+    <!-- No envía datos a ningún servidor: assets/js/alquiler.js actualiza el resumen y el enlace
+         de WhatsApp cada vez que se cambia una opción.
+         EJEMPLO: tamaños, capacidades, voltajes y rangos de tiempo vienen de los demos.
+         Para cambiar una opción edita value / data-resumen / el texto de la tarjeta.
+         Se corrigió el demo: los rangos "7-9" y "9-12+" se cruzaban en el mes 9; ahora son "7-9" y "10-12+". -->
+    <section class="seccion" id="cotizador" aria-labelledby="titulo-cotizador">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Diseña tu plan a la medida</p>
+          <h2 id="titulo-cotizador">Configurador de alquiler</h2>
+          <p>Elige el tamaño, el voltaje y el tiempo estimado. Te escribiremos por WhatsApp con la disponibilidad y el valor.</p>
+        </div>
+
+        <form class="alq" id="alquiler-form" novalidate data-reveal>
+          <div class="alq__opcionesbox">
+
+            <fieldset class="alq__paso">
+              <legend>1. Elige el tamaño (grupos) de la máquina</legend>
+              <div class="alq__opciones alq__opciones--3">
+                <div class="opcion">
+                  <input type="radio" id="alq-grupos-1" name="grupos" value="1" data-resumen="1 grupo" checked>
+                  <label class="opcion__caja" for="alq-grupos-1"><strong>1 grupo</strong><small>50-70 tazas/h</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="alq-grupos-2" name="grupos" value="2" data-resumen="2 grupos">
+                  <label class="opcion__caja" for="alq-grupos-2"><strong>2 grupos</strong><small>90-120 tazas/h</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="alq-grupos-3" name="grupos" value="3" data-resumen="3 grupos">
+                  <label class="opcion__caja" for="alq-grupos-3"><strong>3 grupos</strong><small>150+ tazas/h</small></label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="alq__paso">
+              <legend>2. Especificación eléctrica (voltaje)</legend>
+              <div class="alq__opciones alq__opciones--2">
+                <div class="opcion">
+                  <input type="radio" id="alq-voltaje-110" name="voltaje" value="110" data-resumen="110V (estándar)" checked>
+                  <label class="opcion__caja" for="alq-voltaje-110"><strong>110V</strong><small>Conexión convencional</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="alq-voltaje-220" name="voltaje" value="220" data-resumen="220V (bifásica)">
+                  <label class="opcion__caja" for="alq-voltaje-220"><strong>220V</strong><small>Mayor potencia y eficiencia</small></label>
+                </div>
+              </div>
+              <p class="campo__ayuda alq__aviso" id="alq-aviso-voltaje" role="status" hidden>La máquina de 3 grupos requiere conexión a 220V.</p>
+            </fieldset>
+
+            <fieldset class="alq__paso">
+              <legend>3. Tiempo de permanencia estimado</legend>
+              <div class="alq__opciones alq__opciones--4">
+                <div class="opcion">
+                  <input type="radio" id="alq-tiempo-1-3" name="tiempo" value="1-3" data-resumen="1 a 3 meses" checked>
+                  <label class="opcion__caja" for="alq-tiempo-1-3"><strong>1-3 meses</strong><small>Eventos / prueba</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="alq-tiempo-4-6" name="tiempo" value="4-6" data-resumen="4 a 6 meses">
+                  <label class="opcion__caja" for="alq-tiempo-4-6"><strong>4-6 meses</strong><small>Temporada</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="alq-tiempo-7-9" name="tiempo" value="7-9" data-resumen="7 a 9 meses">
+                  <label class="opcion__caja" for="alq-tiempo-7-9"><strong>7-9 meses</strong><small>Mediano plazo</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="alq-tiempo-10-12" name="tiempo" value="10-12" data-resumen="10 a 12 meses o más">
+                  <label class="opcion__caja" for="alq-tiempo-10-12"><strong>10-12+ meses</strong><small>Largo plazo</small></label>
+                </div>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <aside class="alq__resumen" aria-labelledby="titulo-resumen">
+            <h3 id="titulo-resumen">Resumen de cotización</h3>
+            <dl class="resumen" aria-live="polite">
+              <div><dt>Tamaño</dt><dd id="alq-r-grupos">1 grupo</dd></div>
+              <div><dt>Voltaje</dt><dd id="alq-r-voltaje">110V (estándar)</dd></div>
+              <div><dt>Contrato</dt><dd id="alq-r-tiempo">1 a 3 meses</dd></div>
+              <div><dt>Molino</dt><dd>Incluido</dd></div>
+              <div><dt>Mantenimiento</dt><dd>Incluido</dd></div>
+            </dl>
+            <p class="alq__nota"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Incluye instalación, calibración y capacitación inicial.</p>
+            <!-- El href lo asigna alquiler.js (no usa data-wa-message porque el mensaje cambia con las opciones) -->
+            <a class="btn btn--wa btn--block" id="alq-wa" href="#"><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Solicitar cotización por WhatsApp</a>
+          </aside>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ PLANES RECOMENDADOS ============ -->
+    <!-- EJEMPLO: los 3 planes, sus capacidades, calderas, voltajes y la etiqueta "El más popular" vienen
+         de los demos y NO están confirmados. No hay precios. -->
+    <section class="seccion banda" id="planes" aria-labelledby="titulo-planes">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Soluciones preconfiguradas</p>
+          <h2 id="titulo-planes">Planes de alquiler recomendados</h2>
+        </div>
+        <div class="planes">
+        <article class="paquete" data-reveal>
+          <h3 class="plan__nombre">Plan Compact</h3>
+          <p class="plan__sub">Máquina de 1 grupo</p>
+          <p class="plan__desc">Diseñada para barras móviles, pequeños cafés, oficinas o restaurantes de flujo moderado.</p>
+          <ul class="check-list">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Capacidad: 50-70 bebidas por hora</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Disponible en 110V / 220V</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Molino profesional semiautomático incluido</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Mantenimiento preventivo mensual</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Capacitación técnica para operadores</li>
+          </ul>
+          <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el Plan Compact (alquiler de 1 grupo). Quisiera recibir información y disponibilidad."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar plan de 1 grupo</a>
+        </article>
+
+        <article class="paquete paquete--destacado" data-reveal>
+          <span class="badge">El más popular</span>
+          <h3 class="plan__nombre">Plan Comercial</h3>
+          <p class="plan__sub">Máquina de 2 grupos</p>
+          <p class="plan__desc">La más usada en cafeterías de flujo constante que requieren agilidad de servicio.</p>
+          <ul class="check-list">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Capacidad: 90-120 bebidas por hora</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Disponible en 110V / 220V (caldera de 11-15 L)</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>2 lanzas de vapor de alto rendimiento</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Molino profesional de alto tráfico</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Asistencia técnica prioritaria</li>
+          </ul>
+          <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el Plan Comercial (alquiler de 2 grupos). Quisiera recibir información y disponibilidad."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar plan de 2 grupos</a>
+        </article>
+
+        <article class="paquete" data-reveal>
+          <h3 class="plan__nombre">Plan Alto Flujo</h3>
+          <p class="plan__sub">Máquina de 3 grupos</p>
+          <p class="plan__desc">Para establecimientos de gran escala, universidades o eventos masivos con picos de demanda continuos.</p>
+          <ul class="check-list">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Capacidad: más de 150 bebidas por hora</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Requiere conexión a 220V</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Caldera de gran capacidad (más de 18 L)</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Molino on-demand de alta precisión</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Equipo de reemplazo disponible</li>
+          </ul>
+          <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el Plan Alto Flujo (alquiler de 3 grupos). Quisiera recibir información y disponibilidad."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar plan de 3 grupos</a>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <!-- EJEMPLO: respuestas basadas en los demos. Validar con el negocio. -->
+    <section class="seccion" aria-labelledby="titulo-faq">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Resolvemos tus dudas</p>
+          <h2 id="titulo-faq">Preguntas frecuentes sobre el alquiler</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <div>
+            <h3>¿Qué incluye la tarifa de alquiler?</h3>
+            <p>Incluye la máquina espresso, el molino profesional, la instalación técnica, la capacitación del personal y el mantenimiento preventivo y correctivo.</p>
+          </div>
+          <div>
+            <h3>¿Qué requisitos de agua y luz necesito?</h3>
+            <p>Requerimos una toma de agua potable (o garrafón con bomba de succión) y un punto eléctrico de 110V o 220V con su respectiva protección según la máquina seleccionada.</p>
+          </div>
+          <div>
+            <h3>¿Qué sucede si la máquina presenta una falla?</h3>
+            <p>Nuestro equipo técnico atiende la emergencia. Si la reparación toma más tiempo del previsto, coordinamos una máquina de respaldo.</p>
+          </div>
+          <div>
+            <h3>¿Hay descuento por contratos de larga duración?</h3>
+            <p>Consulta por tarifas preferenciales en contratos de larga duración (6 y 12 meses o más).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LLAMADO FINAL ============ -->
+    <section class="seccion banda cta-final" aria-labelledby="titulo-cta">
+      <div class="wrap" data-reveal>
+        <h2 id="titulo-cta">¿Listo para equipar tu negocio?</h2>
+        <p>Escríbenos y continuamos la conversación por WhatsApp.</p>
+        <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: lo inserta layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts: el ORDEN importa. alquiler.js va al final porque usa whatsapp.js. -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/icons/sprite.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/alquiler.js" defer></script>
+</body>
+</html>
