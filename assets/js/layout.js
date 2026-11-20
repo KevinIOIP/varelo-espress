@@ -149,4 +149,5 @@
 
   // 4) Con todo insertado, armamos los enlaces de WhatsApp
   if (window.VareloWA) window.VareloWA.enlazar(document);
-})();
+})(); 
+                                                                      
