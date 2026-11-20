@@ -54,6 +54,15 @@
     });
   }
 
+  // Abre WhatsApp desde JavaScript (lo usan los formularios).
+  function abrir(mensaje) {
+    if (!numeroValido) return false;
+    var url = crearEnlace(mensaje);
+    var ventana = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!ventana) window.location.href = url;   // si el navegador bloquea la ventana nueva
+    return true;
+  }
+
   // API pública para otros scripts (filtros, formularios, cotizadores…)
-  window.VareloWA = { crearEnlace: crearEnlace, enlazar: enlazar, limpiar: limpiar };
+  window.VareloWA = { crearEnlace: crearEnlace, enlazar: enlazar, abrir: abrir, limpiar: limpiar };
 })();

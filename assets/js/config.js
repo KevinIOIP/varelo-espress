@@ -32,13 +32,12 @@ window.VARELO_CONFIG = {
   mensajes: {
     general:  "Hola, quisiera recibir información sobre los productos y servicios de Varelo Espress.",
     inicio:   "Hola, quisiera recibir información sobre los productos y servicios de Varelo Espress.",
-    cafe:     "Hola, quisiera información sobre la venta de café de Varelo Espress.",
+    cafe:     "Hola, quisiera información sobre el café de Varelo Espress.",
     alquiler: "Hola, quisiera información sobre el alquiler de máquinas de Varelo Espress.",
     maquinas: "Hola, quisiera información sobre la venta de máquinas de Varelo Espress.",
     repuestos:"Hola, quisiera consultar por repuestos para mi máquina de espresso.",
     servicio: "Hola, quisiera solicitar servicio técnico para mi máquina de espresso.",
-    nosotros: "Hola, quisiera conocer más sobre Varelo Espress.",
-    // contacto: "Hola, quisiera comunicarme con Varelo Espress."
+    nosotros: "Hola, quisiera conocer más sobre Varelo Espress."
   },
 
   sitio: {

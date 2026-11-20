@@ -1,6 +1,6 @@
 /* =====================================================================
    components.css — Piezas reutilizables en TODAS las páginas:
-   iconos, botones, header/menú, tarjetas, footer, botón flotante.
+   iconos, botones, header/menú, tarjetas, formularios, footer, botón flotante.
    ===================================================================== */
 
 /* ---------- Iconos ---------- */
@@ -14,6 +14,7 @@
 /* ---------- Botones ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;font:600 .98rem/1.2 var(--fuente-texto);border:1.5px solid transparent;cursor:pointer;text-align:center;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s,color .2s}
 .btn--sm{min-height:44px;padding:.55rem 1.15rem;font-size:.92rem}
+.btn--block{width:100%}
 .btn--oro{background:var(--gradiente-oro);color:#1a1008}
 .btn--oro:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(216,161,100,.35)}
 .btn--borde{border-color:var(--oro);color:var(--oro);background:transparent}
@@ -31,7 +32,7 @@
 .brand{display:flex;align-items:center;gap:.75rem;min-width:0}
 .brand img{width:52px;height:auto;flex:none}
 .brand__text{display:block;min-width:0}
-.brand__name{display:block;font-family:var(--fuente-titulo);font-weight:700;font-size:1.1rem;line-height:1.1;color:var(--crema);white-space:nowrap}
+.brand__name{display:block;font-family:var(--fuente-titulo);font-weight:700;font-size:1.15rem;line-height:1.1;color:var(--crema);white-space:nowrap}
 .brand__tag{display:block;margin-top:4px;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--oro);white-space:nowrap}
 
 .nav__list{display:flex;align-items:center;gap:.1rem}
@@ -83,11 +84,31 @@
 .card__link:focus-visible{outline:none}
 .card:has(.card__link:focus-visible){outline:3px solid var(--oro-claro);outline-offset:3px}
 
+/* ---------- Etiquetas y listas con check (catálogos) ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chip{display:inline-block;padding:.28rem .75rem;border:1px solid var(--borde);border-radius:999px;font-size:.8rem;color:var(--oro-claro);background:rgba(216,161,100,.08)}
+.badge{display:inline-block;padding:.3rem .8rem;border-radius:999px;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--gradiente-oro);color:#1a1008}
+.check-list{display:grid;gap:.5rem;margin:.2rem 0 .6rem}
+.check-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.93rem;color:var(--texto)}
+.check-list .ico{color:var(--oro);width:18px;height:18px;margin-top:.2rem}
+
+/* ---------- Formularios (envían a WhatsApp, sin backend) ---------- */
+.campo{display:flex;flex-direction:column;gap:.45rem;margin-bottom:1.15rem}
+.campo label{font-size:.92rem;font-weight:500;color:var(--crema)}
+.campo input,.campo select,.campo textarea{width:100%;min-height:48px;padding:.75rem 1rem;background:var(--negro);color:var(--texto);border:1.5px solid var(--borde);border-radius:var(--radio-sm);font:inherit;font-size:1rem;transition:border-color .2s,box-shadow .2s}
+.campo select{appearance:none;-webkit-appearance:none;padding-right:2.6rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D8A164' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;background-size:20px}
+.campo input:hover,.campo select:hover{border-color:var(--oro-profundo)}
+.campo input:focus,.campo select:focus{outline:none;border-color:var(--oro);box-shadow:0 0 0 3px rgba(216,161,100,.28)}
+.campo input.invalido,.campo select.invalido{border-color:#ff7a62}
+.campo__ayuda{font-size:.85rem;color:var(--texto-suave)}
+.campo__error{min-height:1.2em;font-size:.86rem;color:#ff9d8a}
+.form__estado{min-height:1.4em;margin-top:.8rem;font-size:.9rem;color:var(--texto-suave);text-align:center}
+
 /* ---------- Footer ---------- */
 .footer{border-top:1px solid var(--borde);background:var(--superficie);padding-top:3rem;color:var(--texto-suave);font-size:.95rem}
 .footer__grid{display:grid;gap:2rem;grid-template-columns:1fr}
 .footer__marca img{width:64px;margin-bottom:.8rem}
-.footer__nombre{font-family:var(--fuente-titulo);font-weight:700;font-size:1.15rem;color:var(--crema);margin-bottom:.3rem}
+.footer__nombre{font-family:var(--fuente-titulo);font-weight:700;font-size:1.2rem;color:var(--crema);margin-bottom:.3rem}
 .footer__titulo{font-family:var(--fuente-texto);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro);font-weight:600;margin-bottom:.9rem}
 .footer__lista{display:grid;gap:.45rem;margin-bottom:1rem}
 .footer__lista li{display:flex;align-items:center;gap:.6rem}

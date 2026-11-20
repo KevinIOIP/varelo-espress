@@ -3,10 +3,11 @@
    Cada bloque lleva el nombre de la página a la que pertenece.
    ===================================================================== */
 
-/* ===================== PÁGINA: INICIO ===================== */
+/* ===================== COMÚN A VARIAS PÁGINAS ===================== */
 
 /* --- Hero: foto de fondo + degradado para que el texto se lea --- */
 .hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(520px,75vh,760px);overflow:hidden;background:var(--negro)}
+.hero--interna{min-height:clamp(420px,58vh,560px)}   /* versión más baja para páginas internas */
 .hero__media{position:absolute;inset:0;z-index:-2}
 .hero__media img{width:100%;height:100%;object-fit:cover;object-position:72% center}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
@@ -22,7 +23,7 @@
 .hero__puntos .ico{color:var(--oro);width:18px;height:18px}
 
 @media (max-width:767px){
-  .hero{min-height:0}
+  .hero,.hero--interna{min-height:0}
   .hero::after{background:linear-gradient(180deg,rgba(11,7,5,.55) 0%,rgba(11,7,5,.82) 60%,var(--negro) 100%)}
   .hero__media img{object-position:80% center}
   .hero__content{padding:3.2rem 0 3rem}
@@ -32,6 +33,15 @@
 /* --- Secciones --- */
 .seccion{padding:4.5rem 0}
 @media (max-width:767px){.seccion{padding:3.2rem 0}}
+.banda{background:linear-gradient(180deg,var(--superficie),var(--negro));border-block:1px solid var(--borde)}
+
+/* --- Llamado final --- */
+.cta-final{text-align:center;background:radial-gradient(700px 260px at 50% 0%,rgba(216,161,100,.16),transparent 70%)}
+.cta-final h2{margin-bottom:1rem}
+.cta-final p{color:var(--texto-suave);max-width:54ch;margin:0 auto 1.8rem}
+@media (max-width:767px){.cta-final .btn{width:100%}}
+
+/* ===================== PÁGINA: INICIO ===================== */
 
 /* --- Servicios: 1 col (móvil) · 2 col (tablet) · 6 col (escritorio: 3 + 2) --- */
 .servicios{display:grid;gap:1.25rem;grid-template-columns:1fr}
@@ -48,22 +58,69 @@
 }
 
 /* --- Cómo funciona (3 pasos) --- */
-.banda{background:linear-gradient(180deg,var(--superficie),var(--negro));border-block:1px solid var(--borde)}
-.pasos{display:grid;gap:1.25rem;grid-template-columns:1fr;counter-reset:paso}
+.pasos{display:grid;gap:1.25rem;grid-template-columns:1fr}
 @media (min-width:768px){.pasos{grid-template-columns:repeat(3,1fr)}}
 .paso{position:relative;padding:1.6rem 1.5rem;border:1px solid var(--borde);border-radius:var(--radio);background:var(--superficie)}
 .paso__num{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;margin-bottom:1rem;background:var(--gradiente-oro);color:#1a1008;font:700 1.05rem var(--fuente-titulo)}
 .paso h3{margin-bottom:.5rem}
 .paso p{color:var(--texto-suave);font-size:.95rem}
-.pasos-nota{margin-top:1.5rem;display:flex;align-items:center;gap:.6rem;color:var(--texto-suave);font-size:.95rem}
-.pasos-nota .ico{color:var(--oro)}
 
 /* --- Marcas (texto, sin logos de terceros) --- */
 .marcas{display:flex;flex-wrap:wrap;gap:.7rem}
 .marcas li{padding:.6rem 1.15rem;border:1px solid var(--borde);border-radius:999px;color:var(--texto);font-size:.92rem;letter-spacing:.03em;background:var(--superficie)}
 
-/* --- Llamado final --- */
-.cta-final{text-align:center;background:radial-gradient(700px 260px at 50% 0%,rgba(216,161,100,.16),transparent 70%)}
-.cta-final h2{margin-bottom:1rem}
-.cta-final p{color:var(--texto-suave);max-width:54ch;margin:0 auto 1.8rem}
-@media (max-width:767px){.cta-final .btn{width:100%}}
+/* ===================== PÁGINA: CAFÉ ===================== */
+
+/* --- Beneficios (franja de 3) --- */
+.beneficios{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media (min-width:768px){.beneficios{grid-template-columns:repeat(3,1fr)}}
+.beneficio{display:flex;gap:1rem;align-items:flex-start;padding:1.4rem 1.3rem;border:1px solid var(--borde);border-radius:var(--radio);background:var(--superficie)}
+.beneficio__icon{flex:none;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;color:var(--oro);background:rgba(216,161,100,.12);border:1px solid rgba(216,161,100,.3)}
+.beneficio h3{font-size:1.05rem;margin-bottom:.3rem}
+.beneficio p{color:var(--texto-suave);font-size:.93rem}
+
+/* --- Perfiles de tueste: 1 col · 3 col --- */
+.tuestes{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media (min-width:640px){.tuestes{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:899px) and (min-width:640px){.tuestes{grid-template-columns:1fr 1fr}.tuestes .card:last-child{grid-column:1/-1}}
+.tuestes .card__body .btn{margin-top:.6rem;position:relative;z-index:2}
+
+/* --- Paquetes por libras: 1 col · 2 col · 6 col (3 + 2 centrados en escritorio) --- */
+.paquetes{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media (min-width:640px){
+  .paquetes{grid-template-columns:repeat(2,1fr)}
+  .paquetes .paquete:last-child{grid-column:1/-1}
+}
+@media (min-width:1024px){
+  .paquetes{grid-template-columns:repeat(6,1fr)}
+  .paquetes .paquete{grid-column:span 2}
+  .paquetes .paquete:nth-child(n+4){grid-column:span 3}
+}
+.paquete{position:relative;display:flex;flex-direction:column;gap:.7rem;padding:1.7rem 1.5rem 1.5rem;border:1px solid var(--borde);border-radius:var(--radio);background:var(--superficie);transition:transform .25s,border-color .25s,box-shadow .25s}
+.paquete:hover{transform:translateY(-4px);border-color:var(--oro-profundo);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.paquete--destacado{border-color:var(--oro);background:linear-gradient(180deg,rgba(216,161,100,.1),var(--superficie) 55%)}
+.paquete .badge{position:absolute;top:-.8rem;right:1.2rem}
+.paquete__lbs{display:flex;align-items:baseline;gap:.5rem;font-family:var(--fuente-titulo);color:var(--crema)}
+.paquete__lbs strong{font-size:2.6rem;line-height:1;font-weight:700;background:var(--gradiente-oro);-webkit-background-clip:text;background-clip:text;color:transparent}
+.paquete__lbs span{font-size:1.1rem;color:var(--oro)}
+.paquete__desc{color:var(--texto-suave);font-size:.95rem;min-height:3.2em}
+.paquete .check-list{flex:1;padding-top:.4rem;border-top:1px solid var(--borde)}
+@media (max-width:1023px){.paquete__desc{min-height:0}}
+
+/* --- Cotizador personalizado --- */
+.cotizador{display:grid;gap:2.2rem;grid-template-columns:1fr;align-items:start}
+@media (min-width:900px){.cotizador{grid-template-columns:1fr 1.1fr;gap:3.5rem}}
+.cotizador__texto h2{margin:.6rem 0 1rem}
+.cotizador__texto p{color:var(--texto-suave);max-width:46ch}
+.cotizador__nota{display:flex;align-items:center;gap:.7rem;margin-top:1.5rem;color:var(--texto);font-size:.95rem}
+.cotizador__nota .ico{color:var(--oro)}
+.form{padding:1.8rem 1.6rem;border:1px solid var(--borde);border-radius:var(--radio);background:var(--superficie);box-shadow:var(--sombra)}
+@media (max-width:480px){.form{padding:1.4rem 1.1rem}}
+
+/* --- Entrega a domicilio --- */
+.entrega{display:flex;gap:1.3rem;align-items:center;padding:1.8rem 1.6rem;border:1px solid var(--oro-profundo);border-radius:var(--radio);background:radial-gradient(500px 200px at 0% 0%,rgba(216,161,100,.14),transparent 70%),var(--superficie)}
+.entrega__icon{flex:none;width:64px;height:64px;border-radius:16px;display:grid;place-items:center;color:#1a1008;background:var(--gradiente-oro)}
+.entrega__icon .ico{width:30px;height:30px}
+.entrega h2{font-size:clamp(1.3rem,2.6vw,1.7rem);margin-bottom:.4rem}
+.entrega p{color:var(--texto-suave);max-width:62ch}
+@media (max-width:600px){.entrega{flex-direction:column;align-items:flex-start}}

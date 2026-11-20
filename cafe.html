@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción ÚNICOS por página -->
+  <title>Café en grano y molido en Bogotá | Varelo Espress</title>
+  <meta name="description" content="Café en grano o molido por libras, en tueste medio, oscuro o descafeinado. Cotiza por WhatsApp con Varelo Espress en Bogotá.">
+  <meta name="theme-color" content="#0B0705">
+
+  <!-- Open Graph (vista previa al compartir el enlace) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Varelo Espress">
+  <meta property="og:title" content="Café en grano y molido | Varelo Espress">
+  <meta property="og:description" content="Café por libras en tueste medio, oscuro o descafeinado. Cotiza por WhatsApp.">
+  <!-- PENDIENTE (cuando exista el dominio): descomentar y poner la URL real.
+  <link rel="canonical" href="https://TU-DOMINIO/cafe.html">
+  <meta property="og:url" content="https://TU-DOMINIO/cafe.html">
+  <meta property="og:image" content="https://TU-DOMINIO/assets/img/hero-cafe-1600.webp">
+  -->
+
+  <!-- Iconos de la pestaña -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Google Fonts: Playfair Display (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600..700&display=swap" rel="stylesheet">
+
+  <!-- Estilos: el orden importa (base → componentes → página) -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Imagen principal: se pide cuanto antes -->
+  <link rel="preload" as="image" href="assets/img/hero-cafe-1600.webp" imagesrcset="assets/img/hero-cafe-900.webp 900w, assets/img/hero-cafe-1600.webp 1600w" imagesizes="100vw">
+
+  <!-- Datos estructurados: ruta de navegación (BreadcrumbList).
+       PENDIENTE: agregar las URLs absolutas ("item") cuando exista el dominio. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio" },
+      { "@type": "ListItem", "position": 2, "name": "Café" }
+    ]
+  }
+  </script>
+</head>
+
+<body data-page="cafe">
+
+  <!-- Header: lo inserta layout.js. El <noscript> es el respaldo si JavaScript está apagado -->
+  <div id="site-header">
+    <noscript>
+      <nav aria-label="Principal" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="index.html">Inicio</a><a href="cafe.html">Café</a><a href="alquiler-de-maquinas.html">Alquiler</a><a href="venta-de-maquinas.html">Máquinas</a><a href="repuestos.html">Repuestos</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a>
+      </nav>
+    </noscript>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--interna" aria-labelledby="titulo-hero">
+      <div class="hero__media">
+        <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia) -->
+        <img src="assets/img/hero-cafe-1600.webp"
+             srcset="assets/img/hero-cafe-900.webp 900w, assets/img/hero-cafe-1600.webp 1600w"
+             sizes="100vw" width="1600" height="1067" fetchpriority="high"
+             alt="Granos de café tostado cayendo de una cuchara dorada en una bolsa de papel kraft">
+      </div>
+      <div class="wrap">
+        <div class="hero__content">
+          <p class="eyebrow">Café de origen seleccionado</p>
+          <h1 id="titulo-hero">Grano fresco y tostado de <em>alta calidad</em></h1>
+          <p class="hero__lead">Llevamos el café hasta la puerta de tu negocio o domicilio. Elige la cantidad de libras que necesitas y el nivel de molienda, y consulta la disponibilidad por WhatsApp.</p>
+          <div class="hero__acciones">
+            <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+            <a class="btn btn--borde" href="#paquetes">Ver paquetes por libras <svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFICIOS ============ -->
+    <!-- EJEMPLO: textos de los demos. Validar con el negocio (ver CONTENIDO-PENDIENTE.md). -->
+    <section class="seccion" aria-label="Beneficios del servicio de café" style="padding-bottom:0">
+      <div class="wrap">
+        <div class="beneficios">
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></span>
+            <div><h3>Entrega a domicilio</h3><p>Despachos a domicilio para que nunca te quedes sin café.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <div><h3>Válvula desgasificadora</h3><p>Empaques bilaminados que conservan los aromas y la frescura original.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg></span>
+            <div><h3>Molienda personalizada</h3><p>Te enviamos en grano entero o con la molienda exacta para tu cafetera.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PERFILES DE TUESTE ============ -->
+    <!-- EJEMPLO: los 3 perfiles y sus notas de cata provienen de los demos. Reemplazar por los reales. -->
+    <section class="seccion" id="tuestes" aria-labelledby="titulo-tuestes">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Sabor y carácter en cada taza</p>
+          <h2 id="titulo-tuestes">Nuestros perfiles de tueste</h2>
+        </div>
+        <div class="tuestes">
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/tueste-medio.webp" width="800" height="533" loading="lazy" decoding="async"
+                   alt="Granos de café de tueste medio, de color caramelo y chocolate">
+            </div>
+            <div class="card__body">
+              <h3>Tueste medio</h3>
+              <p>Balance perfecto entre acidez brillante y dulzor acaramelado. Notas a chocolate de mesa, nueces tostadas y frutos amarillos.</p>
+              <ul class="chips"><li class="chip">Equilibrado</li><li class="chip">Ideal para espresso y filtro</li></ul>
+              <a class="btn btn--wa btn--sm" data-wa-message="Hola, quiero información sobre el café de tueste medio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar este tueste</a>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/tueste-oscuro.webp" width="800" height="533" loading="lazy" decoding="async"
+                   alt="Granos de café de tueste oscuro, brillantes y casi negros">
+            </div>
+            <div class="card__body">
+              <h3>Tueste oscuro (italiano)</h3>
+              <p>Cuerpo denso, crema persistente y acidez baja. Notas intensas a cacao amargo, especias y un retrogusto prolongado.</p>
+              <ul class="chips"><li class="chip">Cuerpo intenso</li><li class="chip">Ideal para bebidas con leche</li></ul>
+              <a class="btn btn--wa btn--sm" data-wa-message="Hola, quiero información sobre el café de tueste oscuro (italiano)."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar este tueste</a>
+            </div>
+          </article>
+
+          <article class="card" data-reveal>
+            <div class="card__media">
+              <img src="assets/img/tueste-descafeinado.webp" width="800" height="533" loading="lazy" decoding="async"
+                   alt="Granos de café verdes y tostados con gotas de agua y una hoja verde">
+            </div>
+            <div class="card__body">
+              <h3>Descafeinado especial</h3>
+              <p>Todo el sabor y cuerpo del café seleccionado, pero libre de cafeína mediante procesos naturales de extracción en agua.</p>
+              <ul class="chips"><li class="chip">Sin cafeína</li><li class="chip">Suave y aromático</li></ul>
+              <a class="btn btn--wa btn--sm" data-wa-message="Hola, quiero información sobre el café descafeinado."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar este café</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAQUETES POR LIBRAS ============ -->
+    <!-- EJEMPLO: los 5 paquetes (10, 15, 20, 25 y 30 lbs), sus beneficios y la etiqueta
+         "Más vendido" provienen de los demos y NO están confirmados. No hay precios.
+         Para cambiar un paquete: edita el número, el texto y el data-wa-message del botón. -->
+    <section class="seccion banda" id="paquetes" aria-labelledby="titulo-paquetes">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Para tu negocio</p>
+          <h2 id="titulo-paquetes">Paquetes de café por libras</h2>
+          <p>Elige un paquete y consulta el precio y la disponibilidad por WhatsApp.</p>
+        </div>
+        <div class="paquetes">
+          <article class="paquete" data-reveal>
+            <p class="paquete__lbs"><strong>10</strong><span>lbs</span></p>
+            <h3 class="sr-only">Paquete de 10 libras</h3>
+            <p class="paquete__desc">Ideal para consumo en pequeñas oficinas o pruebas de cafetería.</p>
+            <ul class="check-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Empaque individual de 1 lb</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>En grano o molido</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Entrega a domicilio</li>
+            </ul>
+            <a class="btn btn--wa" data-wa-message="Hola, quiero cotizar el paquete de 10 libras de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar 10 lbs</a>
+          </article>
+
+          <article class="paquete" data-reveal>
+            <p class="paquete__lbs"><strong>15</strong><span>lbs</span></p>
+            <h3 class="sr-only">Paquete de 15 libras</h3>
+            <p class="paquete__desc">El paquete preferido para negocios que están iniciando.</p>
+            <ul class="check-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Bolsas con válvula de frescura</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Perfil de tueste a elección</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Entrega prioritaria</li>
+            </ul>
+            <a class="btn btn--wa" data-wa-message="Hola, quiero cotizar el paquete de 15 libras de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar 15 lbs</a>
+          </article>
+
+          <article class="paquete paquete--destacado" data-reveal>
+            <span class="badge">Más vendido</span>
+            <p class="paquete__lbs"><strong>20</strong><span>lbs</span></p>
+            <h3 class="sr-only">Paquete de 20 libras</h3>
+            <p class="paquete__desc">Equilibrio perfecto de stock semanal para cafeterías activas.</p>
+            <ul class="check-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Precio especial por volumen</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Molienda personalizada</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Envío a domicilio incluido</li>
+            </ul>
+            <a class="btn btn--wa" data-wa-message="Hola, quiero cotizar el paquete de 20 libras de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar 20 lbs</a>
+          </article>
+
+          <article class="paquete" data-reveal>
+            <p class="paquete__lbs"><strong>25</strong><span>lbs</span></p>
+            <h3 class="sr-only">Paquete de 25 libras</h3>
+            <p class="paquete__desc">Abastecimiento confiable con tarifa mayorista diferenciada.</p>
+            <ul class="check-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tueste fresco garantizado</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Múltiples perfiles de tueste</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Despacho directo a tu local</li>
+            </ul>
+            <a class="btn btn--wa" data-wa-message="Hola, quiero cotizar el paquete de 25 libras de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar 25 lbs</a>
+          </article>
+
+          <article class="paquete" data-reveal>
+            <p class="paquete__lbs"><strong>30</strong><span>lbs</span></p>
+            <h3 class="sr-only">Paquete de 30 libras</h3>
+            <p class="paquete__desc">Máximo volumen y mayor margen para tu operación comercial.</p>
+            <ul class="check-list">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Mejor tarifa por libra</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Asesoría de extracción incluida</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Entrega programada</li>
+            </ul>
+            <a class="btn btn--wa" data-wa-message="Hola, quiero cotizar el paquete de 30 libras de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar 30 lbs</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COTIZADOR PERSONALIZADO ============ -->
+    <!-- El formulario NO envía datos a ningún servidor: forms.js valida y abre WhatsApp
+         con un mensaje armado (constructor "cafe" en assets/js/forms.js).
+         EJEMPLO: las opciones de molienda y tueste vienen de los demos.
+         El máximo de 1000 libras es solo un tope de validación: cámbialo en data-max/max. -->
+    <section class="seccion" id="cotizador" aria-labelledby="titulo-cotizador">
+      <div class="wrap cotizador">
+        <div class="cotizador__texto" data-reveal>
+          <p class="eyebrow">Pedido a tu medida</p>
+          <h2 id="titulo-cotizador">¿Necesitas una cantidad diferente?</h2>
+          <p>Ingresa la cantidad exacta que requieres y el tipo de molienda que utiliza tu máquina. Te escribiremos por WhatsApp con la disponibilidad y el precio.</p>
+          <p class="cotizador__nota"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg>Servicio a domicilio disponible en los pedidos.</p>
+        </div>
+
+        <form class="form" data-wa-form="cafe" novalidate data-reveal>
+          <div class="campo">
+            <label for="libras">Cantidad de libras (lbs)</label>
+            <input id="libras" name="libras" type="number" inputmode="numeric" min="1" max="1000" step="1" required
+                   placeholder="Ej.: 12" aria-describedby="libras-error">
+            <span class="campo__error" id="libras-error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="molienda">Tipo de molienda / presentación</label>
+            <select id="molienda" name="molienda" required aria-describedby="molienda-error">
+              <option value="">Selecciona una opción</option>
+              <option value="grano">En grano entero</option>
+              <option value="fina">Molienda fina (espresso)</option>
+              <option value="media">Molienda media (goteo / filtro)</option>
+              <option value="gruesa">Molienda gruesa (prensa francesa)</option>
+            </select>
+            <span class="campo__error" id="molienda-error" aria-live="polite"></span>
+          </div>
+
+          <div class="campo">
+            <label for="tueste">Perfil de tueste preferido</label>
+            <select id="tueste" name="tueste" required aria-describedby="tueste-error">
+              <option value="">Selecciona una opción</option>
+              <option value="medio">Tueste medio (equilibrado)</option>
+              <option value="oscuro">Tueste oscuro (intenso)</option>
+              <option value="descafeinado">Descafeinado</option>
+            </select>
+            <span class="campo__error" id="tueste-error" aria-live="polite"></span>
+          </div>
+
+          <button class="btn btn--wa btn--block" type="submit"><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar pedido por WhatsApp</button>
+          <p class="form__estado" data-form-estado role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ ENTREGA A DOMICILIO ============ -->
+    <!-- EJEMPLO: texto de los demos. Se retiró la palabra "garantizada" hasta confirmar la cobertura real. -->
+    <section class="seccion" style="padding-top:0" aria-labelledby="titulo-entrega">
+      <div class="wrap">
+        <div class="entrega" data-reveal>
+          <span class="entrega__icon"><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg></span>
+          <div>
+            <h2 id="titulo-entrega">Entrega a domicilio</h2>
+            <p>Realizamos envíos de café directo a tu puerta o local comercial. Tostamos periódicamente para que cada libra conserve sus propiedades intactas. Haz tu consulta hoy y recíbelo listo para preparar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LLAMADO FINAL ============ -->
+    <section class="seccion banda cta-final" aria-labelledby="titulo-cta">
+      <div class="wrap" data-reveal>
+        <h2 id="titulo-cta">¿Listo para abastecer tu negocio?</h2>
+        <p>Escríbenos y continuamos la conversación por WhatsApp.</p>
+        <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: lo inserta layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts: el ORDEN importa. "defer" los ejecuta en orden cuando el HTML ya cargó. -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/icons/sprite.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>

@@ -16,15 +16,16 @@
   if (!cfg) { console.error('[layout.js] Falta config.js'); return; }
 
   /* Páginas del menú. "id" debe coincidir con <body data-page="...">.
-     Para agregar o renombrar una página, se hace aquí. */
+     Para agregar, quitar o renombrar una página, se hace aquí.
+     (Esta lista alimenta el menú del header Y la lista del footer.) */
   var PAGINAS = [
     { id: 'inicio',   etiqueta: 'Inicio',           archivo: 'index.html' },
-    { id: 'cafe',     etiqueta: 'Café',    archivo: 'venta-de-cafe.html' },
+    { id: 'cafe',     etiqueta: 'Café',             archivo: 'cafe.html' },
     { id: 'alquiler', etiqueta: 'Alquiler',         archivo: 'alquiler-de-maquinas.html' },
     { id: 'maquinas', etiqueta: 'Máquinas',         archivo: 'venta-de-maquinas.html' },
     { id: 'repuestos',etiqueta: 'Repuestos',        archivo: 'repuestos.html' },
     { id: 'servicio', etiqueta: 'Servicio técnico', archivo: 'servicio-tecnico.html' },
-    { id: 'nosotros', etiqueta: 'Nosotros',         archivo: 'nosotros.html' },
+    { id: 'nosotros', etiqueta: 'Nosotros',         archivo: 'nosotros.html' }
   ];
 
   var LOGO = 'assets/img/logo-varelo-160.webp';
@@ -71,7 +72,7 @@
       logo,
       el('span', { 'class': 'brand__text' }, [
         el('span', { 'class': 'brand__name', texto: cfg.empresa.nombre }),
-        el('span', { 'class': 'brand__tag', texto: 'Pasión por el Café' })
+        el('span', { 'class': 'brand__tag', texto: 'Café & Máquinas' })
       ])
     ]);
 
@@ -94,7 +95,7 @@
       navegacion.appendChild(el('li', {}, [el('a', { href: p.archivo, texto: p.etiqueta })]));
     });
 
-    var contacto = el('ul', { 'class': 'footer__lista' }, [
+    var datos = el('ul', { 'class': 'footer__lista' }, [
       el('li', {}, [icono('i-pin'), el('span', { texto: cfg.empresa.ciudad + ', ' + cfg.empresa.pais })]),
       el('li', {}, [icono('i-phone'), el('span', { texto: cfg.whatsapp.numeroVisible })])
     ]);
@@ -118,7 +119,7 @@
           el('p', { texto: 'Café, máquinas, repuestos y servicio técnico en ' + cfg.empresa.ciudad + '.' })
         ]),
         el('nav', { 'class': 'footer__col', 'aria-label': 'Pie de página' }, [el('h2', { 'class': 'footer__titulo', texto: 'Páginas' }), navegacion]),
-        el('div', { 'class': 'footer__col' }, [el('h2', { 'class': 'footer__titulo', texto: 'Contacto' }), contacto, wa]),
+        el('div', { 'class': 'footer__col' }, [el('h2', { 'class': 'footer__titulo', texto: 'Escríbenos' }), datos, wa]),
         redes.children.length ? el('div', { 'class': 'footer__col' }, [el('h2', { 'class': 'footer__titulo', texto: 'Redes' }), redes]) : null
       ]),
       el('div', { 'class': 'wrap footer__legal' }, [
@@ -149,5 +150,4 @@
 
   // 4) Con todo insertado, armamos los enlaces de WhatsApp
   if (window.VareloWA) window.VareloWA.enlazar(document);
-})(); 
-                                                                      
+})();

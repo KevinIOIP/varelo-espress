@@ -26,6 +26,7 @@
   --radio-sm: 10px;
   --sombra: 0 10px 30px rgba(0, 0, 0, .45);
   --max: 1160px;
+  --alto-header: 72px;   /* alto del header: lo usan el menú móvil y el scroll a anclas */
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
