@@ -45,7 +45,7 @@ Cada página debe llevar `<body data-page="...">` con su id (inicio, cafe, alqui
 | Café | `cafe.html` | ✔ |
 | Alquiler de máquinas | `alquiler-de-maquinas.html` | ✔ |
 | Venta de máquinas | `venta-de-maquinas.html` | ✔ |
-| Repuestos | `repuestos.html` | ✔ |
+| Repuestos | `                             q                                                                           ` | ✔ |
 | Servicio técnico | `servicio-tecnico.html` | ✔ |
 | Nosotros | `nosotros.html` | ✔ | (Contenido de ejemplo)
 
