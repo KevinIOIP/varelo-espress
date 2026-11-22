@@ -7,7 +7,7 @@
    Para agregar un icono: añade otro <symbol id="i-nombre"> aquí.
    ===================================================================== */
 window.VARELO_SPRITE =
-'<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">' +
+  '<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">' +
   '<symbol id="i-coffee" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></symbol>' +
   '<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>' +
   '<symbol id="i-machine" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M9 21v-5h6v5M10 12h4"/></symbol>' +
@@ -29,5 +29,9 @@ window.VARELO_SPRITE =
   '<symbol id="i-package" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>' +
   '<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13c0-6 5-9 16-9 0 11-3 16-9 16Z"/><path d="M4 21c3-6 6-9 10-11"/></symbol>' +
   /* Logo de WhatsApp: es un icono RELLENO (usa la clase .ico--wa) */
+  '<symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.7s6 6.1 6 10.3a6 6 0 0 1-12 0c0-4.2 6-10.3 6-10.3Z"/></symbol>' +
+  '<symbol id="i-wind" viewBox="0 0 24 24"><path d="M9.6 4.6A2 2 0 1 1 11 8H2M12.6 19.4A2 2 0 1 0 14 16H2M17.7 7.7A2.5 2.5 0 1 1 19.5 12H2"/></symbol>' +
+  '<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>' +
+  '<symbol id="i-gift" viewBox="0 0 24 24"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7ZM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></symbol>' +
   '<symbol id="i-wa" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.5A9.9 9.9 0 1 0 12.04 2Zm5.8 14c-.25.7-1.45 1.35-2 1.4-.5.05-1.1.2-3.7-.8-3.1-1.2-5.1-4.4-5.3-4.6-.15-.2-1.25-1.7-1.25-3.2s.8-2.3 1.1-2.6c.25-.3.6-.35.8-.35h.55c.2 0 .4 0 .6.5l.85 2c.1.2.15.4 0 .6l-.35.5c-.15.15-.3.35-.15.65.15.3.7 1.2 1.55 1.9 1.05.95 1.95 1.25 2.25 1.4.3.15.45.1.65-.1.2-.25.75-.85.95-1.15.2-.3.4-.25.65-.15l1.9.9c.3.15.5.2.6.35.1.15.1.8-.15 1.5Z"/></symbol>' +
-'</svg>';
+  "</svg>";

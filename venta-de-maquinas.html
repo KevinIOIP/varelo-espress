@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción ÚNICOS por página.
+       PENDIENTE: cuando se confirmen las marcas reales, agregarlas a la descripción. -->
+  <title>Venta de máquinas de café espresso en Bogotá | Varelo Espress</title>
+  <meta name="description" content="Catálogo de máquinas de café espresso semiautomáticas de 1 y 2 grupos en Bogotá. Consulta características, disponibilidad y precio por WhatsApp con Varelo Espress.">
+  <meta name="theme-color" content="#0B0705">
+
+  <!-- Open Graph (vista previa al compartir el enlace) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Varelo Espress">
+  <meta property="og:title" content="Venta de máquinas de café espresso | Varelo Espress">
+  <meta property="og:description" content="Máquinas espresso semiautomáticas de 1 y 2 grupos. Consulta disponibilidad y precio por WhatsApp.">
+  <!-- PENDIENTE (cuando exista el dominio): descomentar y poner la URL real.
+  <link rel="canonical" href="https://TU-DOMINIO/venta-de-maquinas.html">
+  <meta property="og:url" content="https://TU-DOMINIO/venta-de-maquinas.html">
+  <meta property="og:image" content="https://TU-DOMINIO/assets/img/hero-maquinas-1600.webp">
+  -->
+
+  <!-- Iconos de la pestaña -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Google Fonts: Playfair Display (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600..700&display=swap" rel="stylesheet">
+
+  <!-- Estilos: el orden importa (base → componentes → página) -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Imagen principal: se pide cuanto antes -->
+  <link rel="preload" as="image" href="assets/img/hero-maquinas-1600.webp" imagesrcset="assets/img/hero-maquinas-900.webp 900w, assets/img/hero-maquinas-1600.webp 1600w" imagesizes="100vw">
+
+  <!-- Datos estructurados: ruta de navegación (BreadcrumbList).
+       No se agrega Product/ItemList mientras los modelos sean de EJEMPLO y no haya precios.
+       PENDIENTE: agregar las URLs absolutas ("item") cuando exista el dominio. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio" },
+      { "@type": "ListItem", "position": 2, "name": "Venta de máquinas" }
+    ]
+  }
+  </script>
+</head>
+
+<body data-page="maquinas">
+
+  <!-- Header: lo inserta layout.js. El <noscript> es el respaldo si JavaScript está apagado -->
+  <div id="site-header">
+    <noscript>
+      <nav aria-label="Principal" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="index.html">Inicio</a><a href="cafe.html">Café</a><a href="alquiler-de-maquinas.html">Alquiler</a><a href="venta-de-maquinas.html">Máquinas</a><a href="repuestos.html">Repuestos</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a>
+      </nav>
+    </noscript>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--interna" aria-labelledby="titulo-hero">
+      <div class="hero__media">
+        <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia) -->
+        <img src="assets/img/hero-maquinas-1600.webp"
+             srcset="assets/img/hero-maquinas-900.webp 900w, assets/img/hero-maquinas-1600.webp 1600w"
+             sizes="100vw" width="1600" height="1067" fetchpriority="high"
+             alt="Dos máquinas de espresso profesionales sobre una barra de piedra oscura">
+      </div>
+      <div class="wrap">
+        <div class="hero__content">
+          <p class="eyebrow">Equipos profesionales de alto rendimiento</p>
+          <h1 id="titulo-hero">Catálogo de <em>máquinas espresso</em></h1>
+          <!-- EJEMPLO: se omitieron "importadas", "revisados" y "garantizados" del demo hasta confirmar su condición real -->
+          <p class="hero__lead">Explora nuestras máquinas semiautomáticas y consulta por WhatsApp la disponibilidad y el precio de la que necesite tu cafetería o negocio.</p>
+          <div class="hero__acciones">
+            <a class="btn btn--oro" href="#catalogo">Ver catálogo <svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <!-- Los filtros y el buscador los maneja assets/js/filters.js con los atributos data-*:
+         data-grupo / data-origen / data-busqueda de cada máquina.
+         Para AGREGAR una máquina: copia una <article> completa, cambia sus datos y su data-wa-message.
+         EJEMPLO: las 4 máquinas, sus marcas, calderas, capacidades y el origen vienen de los demos y NO están
+         confirmados. No hay precios. Las imágenes son ilustrativas: reemplazar por fotos de cada equipo. -->
+    <section class="seccion" id="catalogo" aria-labelledby="titulo-catalogo">
+      <div class="wrap" data-catalogo>
+        <h2 id="titulo-catalogo" class="sr-only">Catálogo de máquinas</h2>
+
+        <div class="catalogo__barra">
+          <div class="filtros-fila">
+            <div class="filtros" role="group" aria-label="Filtrar por número de grupos" data-filtro="grupo">
+              <button type="button" class="pildora" data-valor="" aria-pressed="true">Todas las máquinas</button>
+              <button type="button" class="pildora" data-valor="1-grupo" aria-pressed="false">1 grupo</button>
+              <button type="button" class="pildora" data-valor="2-grupos" aria-pressed="false">2 grupos</button>
+            </div>
+            <span class="filtros__sep" aria-hidden="true"></span>
+            <div class="filtros" role="group" aria-label="Filtrar por origen" data-filtro="origen" data-filtro-modo="alternar">
+              <button type="button" class="pildora" data-valor="italia" aria-pressed="false">Origen italiano</button>
+            </div>
+          </div>
+
+          <div class="buscador" role="search">
+            <label for="buscar-maquina" class="sr-only">Buscar por marca o modelo</label>
+            <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="buscar-maquina" type="search" data-buscador placeholder="Buscar por marca o modelo..." autocomplete="off">
+          </div>
+        </div>
+
+        <p class="catalogo__contador" data-contador data-unidad="máquinas" role="status" aria-live="polite"></p>
+
+        <div class="catalogo">
+          <!-- EJEMPLO: Astoria Semiautomática — datos del demo; la imagen es ilustrativa (generada con IA) -->
+          <article class="card maquina" data-reveal data-item data-grupo="1-grupo" data-origen="italia" data-busqueda="astoria semiautomatica 1 grupo italia caldera 6 litros">
+            <div class="card__media">
+              <img src="assets/img/maquina-1-grupo.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Máquina de espresso semiautomática de un grupo sobre una barra oscura">
+              <span class="maquina__origen"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Origen: Italia</span>
+              <span class="maquina__capacidad">50-70 bebidas/h</span>
+              <span class="maquina__ilustrativa">Imagen ilustrativa</span>
+            </div>
+            <div class="card__body">
+              <p class="maquina__marca">Astoria</p>
+              <h3>Astoria Semiautomática</h3>
+              <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg><span><strong>Caldera:</strong> 6 litros (capacidad 50-70 bebidas/hora aprox.)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-droplet"/></svg><span><strong>Bomba:</strong> Volumétrica (succión directa desde garrafón en cortes de agua)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg><span><strong>Lancetas:</strong> 1 lanceta profesional para vaporizar leche</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg><span><strong>Agua caliente:</strong> 1 chorro de agua caliente constante</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><span><strong>Capacidad:</strong> 1 grupo (hasta 2 bebidas al mismo tiempo)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-gift"/></svg><span><strong>Incluye:</strong> 1 molino italiano semiautomático</span></li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en la máquina Astoria Semiautomática de 1 grupo. Me gustaría recibir información sobre sus características, disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Milenium Espress Semiautomática — datos del demo; la imagen es ilustrativa (generada con IA) -->
+          <article class="card maquina" data-reveal data-item data-grupo="2-grupos" data-origen="otro" data-busqueda="milenium espress semiautomatica 2 grupos caldera 12 litros">
+            <div class="card__media">
+              <img src="assets/img/maquina-2-grupos-a.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Máquina de espresso semiautomática de dos grupos con manómetros y tazas en la parte superior">
+              <span class="maquina__origen"><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg>Profesional</span>
+              <span class="maquina__capacidad">90-110 bebidas/h</span>
+              <span class="maquina__ilustrativa">Imagen ilustrativa</span>
+            </div>
+            <div class="card__body">
+              <p class="maquina__marca">Milenium Espress</p>
+              <h3>Milenium Espress Semiautomática</h3>
+              <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg><span><strong>Caldera:</strong> 12 litros (capacidad 90-110 bebidas/hora aprox.)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-droplet"/></svg><span><strong>Bomba:</strong> Volumétrica (succión directa desde garrafón en cortes de agua)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg><span><strong>Lancetas:</strong> 2 lancetas de alto flujo para vaporizar</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg><span><strong>Agua caliente:</strong> 1 chorro constante para infusiones y té</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><span><strong>Capacidad:</strong> 2 grupos (prepara hasta 4 bebidas al mismo tiempo)</span></li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en la máquina Milenium Espress Semiautomática de 2 grupos. Me gustaría recibir información sobre sus características, disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Gaggia Semiautomática — datos del demo; la imagen es ilustrativa (generada con IA) -->
+          <article class="card maquina" data-reveal data-item data-grupo="2-grupos" data-origen="italia" data-busqueda="gaggia semiautomatica 2 grupos italia caldera 15 litros">
+            <div class="card__media">
+              <img src="assets/img/maquina-2-grupos-b.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Máquina de espresso de dos grupos con acabado cromado sobre una barra de madera">
+              <span class="maquina__origen"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Origen: Italia</span>
+              <span class="maquina__capacidad">100-120 bebidas/h</span>
+              <span class="maquina__ilustrativa">Imagen ilustrativa</span>
+            </div>
+            <div class="card__body">
+              <p class="maquina__marca">Gaggia</p>
+              <h3>Gaggia Semiautomática</h3>
+              <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg><span><strong>Caldera:</strong> 15 litros (capacidad 100-120 bebidas/hora aprox.)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-droplet"/></svg><span><strong>Bomba:</strong> Volumétrica (succión directa desde garrafón en cortes de agua)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg><span><strong>Lancetas:</strong> 2 lancetas de gran potencia para crema de leche</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg><span><strong>Agua caliente:</strong> 1 chorro de agua caliente continuo</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><span><strong>Capacidad:</strong> 2 grupos (prepara hasta 4 bebidas al mismo tiempo)</span></li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en la máquina Gaggia Semiautomática de 2 grupos. Me gustaría recibir información sobre sus características, disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Magister Semiautomática — datos del demo; la imagen es ilustrativa (generada con IA) -->
+          <article class="card maquina" data-reveal data-item data-grupo="2-grupos" data-origen="italia" data-busqueda="magister semiautomatica 2 grupos italia caldera 11 litros">
+            <div class="card__media">
+              <img src="assets/img/maquina-2-grupos-c.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Máquina de espresso de dos grupos en negro mate con detalles dorados">
+              <span class="maquina__origen"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Origen: Italia</span>
+              <span class="maquina__capacidad">90-100 bebidas/h</span>
+              <span class="maquina__ilustrativa">Imagen ilustrativa</span>
+            </div>
+            <div class="card__body">
+              <p class="maquina__marca">Magister</p>
+              <h3>Magister Semiautomática</h3>
+              <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg><span><strong>Caldera:</strong> 11 litros (capacidad 90-100 bebidas/hora aprox.)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-droplet"/></svg><span><strong>Bomba:</strong> Volumétrica (succión directa desde garrafón en cortes de agua)</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg><span><strong>Lancetas:</strong> 2 lancetas orientables para vaporizar</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg><span><strong>Agua caliente:</strong> 1 chorro de agua caliente constante</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg><span><strong>Capacidad:</strong> 2 grupos (prepara hasta 4 bebidas al mismo tiempo)</span></li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en la máquina Magister Semiautomática de 2 grupos. Me gustaría recibir información sobre sus características, disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Se muestra solo cuando ninguna máquina cumple los filtros -->
+        <div class="vacio" data-vacio hidden>
+          <h3>No encontramos máquinas con esos filtros</h3>
+          <p>Prueba con otra búsqueda, o escríbenos y te ayudamos a encontrar el equipo que necesitas.</p>
+          <div class="vacio__acciones">
+            <button type="button" class="btn btn--borde" data-limpiar>Limpiar filtros</button>
+            <a class="btn btn--wa" data-wa-message="Hola, estoy buscando una máquina de café espresso y no encuentro la que necesito en el catálogo. Quisiera recibir asesoría."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ASESORÍA ============ -->
+    <!-- EJEMPLO: se omitió "renovación de equipos" del demo (no confirmado). -->
+    <section class="seccion banda" aria-labelledby="titulo-asesoria">
+      <div class="wrap">
+        <div class="asesoria" data-reveal>
+          <div>
+            <h2 id="titulo-asesoria">¿Buscas una máquina o configuración específica?</h2>
+            <p>Te ayudamos a elegir la máquina ideal según el flujo de clientes y el presupuesto de tu negocio. También contamos con opciones de alquiler.</p>
+          </div>
+          <div class="asesoria__acciones">
+            <a class="btn btn--wa" data-wa-message="Hola, necesito asesoría personalizada para elegir una máquina de café para mi negocio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Asesoría personalizada</a>
+            <a class="btn btn--borde" href="alquiler-de-maquinas.html">Ver alquiler</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: lo inserta layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts: el ORDEN importa. filters.js va al final: solo necesita que el HTML esté cargado. -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/icons/sprite.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
+</body>
+</html>

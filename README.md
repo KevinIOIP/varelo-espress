@@ -57,3 +57,14 @@ Cada página debe llevar `<body data-page="...">` con su id (inicio, cafe, alqui
 - [ ] Requisitos de agua y electricidad (preguntas frecuentes)
 - [ ] Se omitió "tecnología italiana" y "repuestos originales" del demo: confirmar si se pueden afirmar
 - [ ] Imagen `hero-alquiler-*.webp` (generada con IA)
+
+## Comercial — Venta de máquinas (`venta-de-maquinas.html`)
+- [ ] Las 4 máquinas (Astoria, Milenium Espress, Gaggia, Magister): marcas, modelos y existencia real
+- [ ] Calderas (6, 12, 15 y 11 L), capacidades por hora (50-70, 90-110, 100-120 y 90-100) y número de lancetas
+- [ ] Bomba volumétrica y "succión directa desde garrafón en cortes de agua"
+- [ ] Origen "Italia" de Astoria, Gaggia y Magister (alimenta el filtro "Origen italiano"; el demo decía "Hecho en Italia")
+- [ ] "Incluye: 1 molino italiano semiautomático": solo figura en Astoria; confirmar si las demás también lo incluyen
+- [ ] Se omitieron del demo "importadas", "revisados", "garantizados" y "renovación de equipos": confirmar si se pueden afirmar
+- [ ] Catálogo sin máquinas de 3 grupos, aunque Alquiler ofrece un plan de 3 grupos
+- [ ] Imágenes: las 4 de las tarjetas y la del hero son ilustrativas (IA). Al poner fotos reales, borrar la etiqueta "Imagen ilustrativa" (`maquina__ilustrativa`) de cada tarjeta
+- [ ] Marcas que se muestran en el catálogo vs. marcas de la sección "Equipos de referencia" del Inicio (son listas distintas en los demos)

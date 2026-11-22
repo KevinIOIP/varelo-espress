@@ -406,3 +406,311 @@
   color: var(--texto-suave);
   font-size: .95rem
 }
+
+/* El atributo hidden debe ganar siempre. Sin esto, .card { display:flex }
+   lo anula y los filtros no ocultarían nada. */
+[hidden] {
+  display: none !important
+}
+
+/* --- Barra de filtros + buscador --- */
+.catalogo__barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1rem
+}
+
+.filtros-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem
+}
+
+.filtros__sep {
+  width: 1px;
+  height: 28px;
+  margin: 0 .4rem;
+  background: var(--borde)
+}
+
+@media (max-width:639px) {
+  .filtros__sep {
+    display: none
+  }
+}
+
+.pildora {
+  min-height: 44px;
+  padding: .55rem 1.1rem;
+  border: 1.5px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto-suave);
+  font: 600 .9rem var(--fuente-texto);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s
+}
+
+.pildora:hover {
+  border-color: var(--oro);
+  color: var(--crema)
+}
+
+.pildora[aria-pressed="true"] {
+  background: var(--gradiente-oro);
+  border-color: transparent;
+  color: #1a1008
+}
+
+.buscador {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 340px
+}
+
+.buscador input {
+  width: 100%;
+  min-height: 48px;
+  padding: .7rem 1rem .7rem 2.9rem;
+  border: 1.5px solid var(--borde);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-size: 1rem
+}
+
+.buscador input::placeholder {
+  color: var(--texto-suave)
+}
+
+.buscador input:hover {
+  border-color: var(--oro-profundo)
+}
+
+.buscador input:focus {
+  outline: none;
+  border-color: var(--oro);
+  box-shadow: 0 0 0 3px rgba(216, 161, 100, .28)
+}
+
+.buscador .ico {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--oro);
+  pointer-events: none
+}
+
+@media (max-width:639px) {
+  .buscador {
+    max-width: none;
+    flex-basis: 100%
+  }
+}
+
+.catalogo__contador {
+  margin-bottom: 1.5rem;
+  font-size: .9rem;
+  color: var(--texto-suave)
+}
+
+/* --- Rejilla del catálogo: 1 col (móvil/tablet) · 2 col (escritorio) --- */
+.catalogo {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr
+}
+
+@media (min-width:900px) {
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem
+  }
+}
+
+/* --- Tarjeta de máquina (reutiliza .card, .card__media y .card__body) --- */
+.maquina .card__media {
+  aspect-ratio: 16/10
+}
+
+.maquina .card__body {
+  padding: 1.5rem
+}
+
+.maquina__origen {
+  position: absolute;
+  top: .85rem;
+  left: .85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .3rem .75rem;
+  border: 1px solid rgba(216, 161, 100, .35);
+  border-radius: 999px;
+  background: rgba(11, 7, 5, .82);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: var(--crema);
+  font-size: .75rem;
+  font-weight: 600
+}
+
+.maquina__origen .ico {
+  width: 14px;
+  height: 14px;
+  color: var(--oro)
+}
+
+.maquina__capacidad {
+  position: absolute;
+  bottom: .85rem;
+  right: .85rem;
+  padding: .3rem .7rem;
+  border-radius: 8px;
+  background: var(--gradiente-oro);
+  color: #1a1008;
+  font-size: .75rem;
+  font-weight: 700
+}
+
+.maquina__ilustrativa {
+  position: absolute;
+  bottom: .85rem;
+  left: .85rem;
+  padding: .15rem .5rem;
+  border-radius: 6px;
+  background: rgba(11, 7, 5, .65);
+  color: rgba(243, 234, 219, .8);
+  font-size: .68rem
+}
+
+.maquina__marca {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--oro)
+}
+
+.maquina h3 {
+  margin-bottom: .2rem;
+  font-size: 1.4rem
+}
+
+.specs {
+  display: grid;
+  gap: .55rem;
+  flex: 1;
+  margin: .9rem 0 1.3rem;
+  padding: 1rem 0;
+  border-block: 1px dashed var(--borde)
+}
+
+.specs li {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  font-size: .92rem;
+  color: var(--texto)
+}
+
+.specs .ico {
+  width: 18px;
+  height: 18px;
+  margin-top: .2rem;
+  color: var(--oro)
+}
+
+.specs strong {
+  font-weight: 600;
+  color: var(--crema)
+}
+
+/* --- Sin resultados --- */
+.vacio {
+  padding: 2.5rem 1.5rem;
+  border: 1px dashed var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  text-align: center
+}
+
+.vacio h3 {
+  margin-bottom: .5rem
+}
+
+.vacio p {
+  max-width: 46ch;
+  margin: 0 auto 1.3rem;
+  color: var(--texto-suave)
+}
+
+.vacio__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  justify-content: center
+}
+
+@media (max-width:479px) {
+  .vacio__acciones .btn {
+    width: 100%
+  }
+}
+
+/* --- Panel de asesoría --- */
+.asesoria {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.6rem 2.4rem;
+  border: 1px solid var(--oro-profundo);
+  border-radius: calc(var(--radio) * 1.5);
+  background: radial-gradient(520px 220px at 0% 0%, rgba(216, 161, 100, .14), transparent 70%), var(--superficie)
+}
+
+.asesoria h2 {
+  margin-bottom: .6rem;
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem)
+}
+
+.asesoria p {
+  max-width: 56ch;
+  color: var(--texto-suave)
+}
+
+.asesoria__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  flex: none
+}
+
+@media (max-width:899px) {
+  .asesoria {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.4rem
+  }
+
+  .asesoria__acciones {
+    width: 100%
+  }
+
+  .asesoria__acciones .btn {
+    width: 100%
+  }
+}
