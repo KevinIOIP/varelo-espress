@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción ÚNICOS por página -->
+  <title>Repuestos para máquinas de café espresso en Bogotá | Varelo Espress</title>
+  <meta name="description" content="Catálogo de repuestos para máquinas de café espresso: cuchillas, empaques, válvulas, electroválvulas, duchas, botoneras y más. Cotiza por WhatsApp con Varelo Espress en Bogotá.">
+  <meta name="theme-color" content="#0B0705">
+
+  <!-- Open Graph (vista previa al compartir el enlace) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Varelo Espress">
+  <meta property="og:title" content="Repuestos para máquinas de café espresso | Varelo Espress">
+  <meta property="og:description" content="Cuchillas, empaques, válvulas, electroválvulas, duchas, botoneras y más. Cotiza por WhatsApp.">
+  <!-- PENDIENTE (cuando exista el dominio): descomentar y poner la URL real.
+  <link rel="canonical" href="https://TU-DOMINIO/repuestos.html">
+  <meta property="og:url" content="https://TU-DOMINIO/repuestos.html">
+  <meta property="og:image" content="https://TU-DOMINIO/assets/img/hero-repuestos-1536.webp">
+  -->
+
+  <!-- Iconos de la pestaña -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Google Fonts: Playfair Display (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600..700&display=swap" rel="stylesheet">
+
+  <!-- Estilos: el orden importa (base → componentes → página) -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Imagen principal: se pide cuanto antes -->
+  <link rel="preload" as="image" href="assets/img/hero-repuestos-1536.webp" imagesrcset="assets/img/hero-repuestos-900.webp 900w, assets/img/hero-repuestos-1536.webp 1536w" imagesizes="100vw">
+
+  <!-- Datos estructurados: ruta de navegación (BreadcrumbList).
+       PENDIENTE: agregar las URLs absolutas ("item") cuando exista el dominio.
+       No se agregan datos de producto (Product) mientras los repuestos sean de EJEMPLO. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio" },
+      { "@type": "ListItem", "position": 2, "name": "Repuestos" }
+    ]
+  }
+  </script>
+</head>
+
+<body data-page="repuestos">
+
+  <!-- Header: lo inserta layout.js. El <noscript> es el respaldo si JavaScript está apagado -->
+  <div id="site-header">
+    <noscript>
+      <nav aria-label="Principal" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="index.html">Inicio</a><a href="cafe.html">Café</a><a href="alquiler-de-maquinas.html">Alquiler</a><a href="venta-de-maquinas.html">Máquinas</a><a href="repuestos.html">Repuestos</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a>
+      </nav>
+    </noscript>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--interna" aria-labelledby="titulo-hero">
+      <div class="hero__media">
+        <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia) -->
+        <img src="assets/img/hero-repuestos-1536.webp"
+             srcset="assets/img/hero-repuestos-900.webp 900w, assets/img/hero-repuestos-1536.webp 1536w"
+             sizes="100vw" width="1536" height="1024" fetchpriority="high"
+             alt="Repuestos de máquina de espresso: filtros, empaques, duchas y piezas de latón sobre una superficie oscura">
+      </div>
+      <div class="wrap">
+        <div class="hero__content">
+          <p class="eyebrow">Componentes y accesorios multimarca</p>
+          <h1 id="titulo-hero">Catálogo de <em>repuestos</em></h1>
+          <!-- EJEMPLO: las marcas vienen del demo. Se omitió "originales" y "principales marcas del mercado" hasta confirmarlo. -->
+          <p class="hero__lead">Mantén tus máquinas espresso en perfecto estado operacional. Consulta por repuestos para marcas como La Marzocco, Rancilio, Nuova Simonelli, Faema, Astoria y Gaggia.</p>
+          <div class="hero__acciones">
+            <a class="btn btn--oro" href="#catalogo">Ver catálogo <svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <!-- Los filtros y el buscador los maneja assets/js/filters.js (el mismo de Máquinas) con atributos data-*:
+         data-categoria / data-busqueda de cada repuesto.
+         Para AGREGAR un repuesto: copia una <article> completa, cambia sus datos, su data-categoria,
+         su data-busqueda (palabras clave en minúscula, sin tildes) y su data-wa-message.
+         Para AGREGAR una categoría: añade un botón <button class="pildora" data-valor="..."> en el grupo de filtros.
+         EJEMPLO: los 9 repuestos, sus referencias, marcas, medidas y el estado de stock vienen del demo y NO están
+         confirmados. No hay precios. Las imágenes son ilustrativas: reemplazar por fotos de cada pieza. -->
+    <section class="seccion" id="catalogo" aria-labelledby="titulo-catalogo">
+      <div class="wrap" data-catalogo>
+        <h2 id="titulo-catalogo" class="sr-only">Catálogo de repuestos</h2>
+
+        <div class="catalogo__barra catalogo__barra--col">
+          <div class="buscador" role="search">
+            <label for="buscar-repuesto" class="sr-only">Buscar repuesto por nombre, marca o referencia</label>
+            <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="buscar-repuesto" type="search" data-buscador placeholder="Buscar por nombre, marca o referencia..." autocomplete="off">
+          </div>
+
+          <div class="filtros" role="group" aria-label="Filtrar por categoría" data-filtro="categoria">
+            <button type="button" class="pildora" data-valor="" aria-pressed="true">Todas las categorías</button>
+              <button type="button" class="pildora" data-valor="cuchillas" aria-pressed="false">Cuchillas</button>
+              <button type="button" class="pildora" data-valor="empaques" aria-pressed="false">Empaques de grupo</button>
+              <button type="button" class="pildora" data-valor="valvulas" aria-pressed="false">Válvulas vapor/agua</button>
+              <button type="button" class="pildora" data-valor="electricos" aria-pressed="false">Eléctricos</button>
+              <button type="button" class="pildora" data-valor="contadores" aria-pressed="false">Contadores volumétricos</button>
+              <button type="button" class="pildora" data-valor="botoneras" aria-pressed="false">Botoneras</button>
+              <button type="button" class="pildora" data-valor="electrovalvulas" aria-pressed="false">Electroválvulas</button>
+              <button type="button" class="pildora" data-valor="duchas" aria-pressed="false">Duchas</button>
+              <button type="button" class="pildora" data-valor="varios" aria-pressed="false">Varios</button>
+          </div>
+        </div>
+
+        <p class="catalogo__contador" data-contador data-unidad="repuestos" role="status" aria-live="polite"></p>
+
+        <div class="repuestos">
+          <!-- EJEMPLO: Cuchillas planas 64 mm Compak K3 / K6 · Ref. CCH-CPK-64. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="cuchillas" data-busqueda="cuchillas compak universal cuchillas planas 64 mm compak k3 / k6 cch-cpk-64 cch-cpk-64 exterior 64 mm / interior 38 mm acero templado de alta duración molino compak k3 k6 planas 64 mm 38 mm esmeril stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-cuchillas.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Par de cuchillas planas de acero para molino, sobre una superficie de pizarra oscura">
+              <span class="repuesto__categoria">Cuchillas</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">Compak · Universal</p>
+              <h3>Cuchillas planas 64 mm Compak K3 / K6</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> CCH-CPK-64</li>
+              <li><strong>Diámetro:</strong> Exterior 64 mm / Interior 38 mm</li>
+              <li><strong>Material:</strong> Acero templado de alta duración</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Cuchillas planas 64 mm Compak K3 / K6 (Ref: CCH-CPK-64). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Empaque de grupo en silicona 8.5 mm / 9 mm · Ref. EMP-SIL-85. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="empaques" data-busqueda="empaques de grupo astoria gaggia wega empaque de grupo en silicona 8.5 mm / 9 mm emp-sil-85 emp-sil-85 silicona de alta flexibilidad resistente a temperatura portafiltros estándar de 58 mm empaque grupo gaggia astoria wega silicona 8.5 9 mm 58 mm goma junta stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-empaques.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Empaques de goma negros para el grupo de una máquina de espresso, apilados y sueltos">
+              <span class="repuesto__categoria">Empaques de grupo</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">Astoria · Gaggia · Wega</p>
+              <h3>Empaque de grupo en silicona 8.5 mm / 9 mm</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> EMP-SIL-85</li>
+              <li><strong>Material:</strong> Silicona de alta flexibilidad resistente a temperatura</li>
+              <li><strong>Compatibilidad:</strong> Portafiltros estándar de 58 mm</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Empaque de grupo en silicona 8.5 mm / 9 mm (Ref: EMP-SIL-85). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Válvula de vapor completa profesional · Ref. VLV-VAP-RN. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="valvulas" data-busqueda="válvulas vapor/agua rancilio nuova simonelli válvula de vapor completa profesional vlv-vap-rn vlv-vap-rn 3/8&quot; macho de latón niquelado maneta giratoria, empaques internos y lanceta inox valvula vapor grifo agua caliente rancilio nuova simonelli faema lanceta 3/8 stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-valvulas.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Válvula de vapor de latón niquelado con maneta negra y lanceta de acero inoxidable">
+              <span class="repuesto__categoria">Válvulas vapor/agua</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">Rancilio · Nuova Simonelli</p>
+              <h3>Válvula de vapor completa profesional</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> VLV-VAP-RN</li>
+              <li><strong>Rosca:</strong> 3/8&quot; macho de latón niquelado</li>
+              <li><strong>Incluye:</strong> Maneta giratoria, empaques internos y lanceta inox</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Válvula de vapor completa profesional (Ref: VLV-VAP-RN). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Presostato Sirai 3 polos (30 A) 0.5-1.4 bar · Ref. ELE-PRS-SIR3P. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="electricos" data-busqueda="eléctricos sirai multimarca presostato sirai 3 polos (30 a) 0.5-1.4 bar ele-prs-sir3p ele-prs-sir3p 30 amperios 230 v / 400 v rosca 1/4&quot; bsp de latón presostato sirai 3 polos 30 a 230 v 400 v resistencia caldera termostato bsp 1/4 presion stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-electricos.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Presostato eléctrico de carcasa metálica con terminales y rosca de latón">
+              <span class="repuesto__categoria">Eléctricos</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">Sirai · Multimarca</p>
+              <h3>Presostato Sirai 3 polos (30 A) 0.5-1.4 bar</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> ELE-PRS-SIR3P</li>
+              <li><strong>Capacidad:</strong> 30 amperios · 230 V / 400 V</li>
+              <li><strong>Conexión:</strong> Rosca 1/4&quot; BSP de latón</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Presostato Sirai 3 polos (30 A) 0.5-1.4 bar (Ref: ELE-PRS-SIR3P). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Flujómetro / contador volumétrico 1/4" · Ref. CNT-VOL-GMM. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="contadores" data-busqueda="contadores volumétricos giemme ceme faema flujómetro / contador volumétrico 1/4&quot; cnt-vol-gmm cnt-vol-gmm conexión de 3 pines / rosca 1/4&quot; inyector plástico reforzado de 1.2 mm contador volumetrico flujometro giemme ceme faema 1/4 dosificador 3 pines 1.2 mm stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-contadores.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Flujómetro compacto de latón y plástico negro con conector de tres pines">
+              <span class="repuesto__categoria">Contadores volumétricos</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">Giemme · Ceme · Faema</p>
+              <h3>Flujómetro / contador volumétrico 1/4&quot;</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> CNT-VOL-GMM</li>
+              <li><strong>Conector:</strong> Conexión de 3 pines / rosca 1/4&quot;</li>
+              <li><strong>Boquilla:</strong> Inyector plástico reforzado de 1.2 mm</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Flujómetro / contador volumétrico 1/4&quot; (Ref: CNT-VOL-GMM). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Botonera de membrana 5 teclas · Ref. BOT-MEM-5T. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="botoneras" data-busqueda="botoneras la marzocco faema botonera de membrana 5 teclas bot-mem-5t bot-mem-5t 4 dosis programables + 1 erogación continua cable de cinta plana con conector rápido botonera teclado membrana la marzocco faema astoria panel control 5 teclas dosis bajo pedido">
+            <div class="card__media">
+              <img src="assets/img/repuesto-botoneras.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Botonera de membrana negra con cinco botones y cable plano con conector">
+              <span class="repuesto__categoria">Botoneras</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--pedido">Bajo pedido</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">La Marzocco · Faema</p>
+              <h3>Botonera de membrana 5 teclas</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> BOT-MEM-5T</li>
+              <li><strong>Funciones:</strong> 4 dosis programables + 1 erogación continua</li>
+              <li><strong>Conexión:</strong> Cable de cinta plana con conector rápido</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Botonera de membrana 5 teclas (Ref: BOT-MEM-5T). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Electroválvula 3 vías Parker 230 V 50/60 Hz · Ref. ELV-PRK-3V. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="electrovalvulas" data-busqueda="electroválvulas parker ode ceme electroválvula 3 vías parker 230 v 50/60 hz elv-prk-3v elv-prk-3v latón para grupo de erogación 9 w / 230 v ac, conexión din electrovalvula 3 vias parker ode ceme 230 v 50 60 hz 9 w agua grupo solenoide bobina din stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-electrovalvulas.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Electroválvula de tres vías de latón con bobina negra y conector DIN">
+              <span class="repuesto__categoria">Electroválvulas</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">Parker · ODE · Ceme</p>
+              <h3>Electroválvula 3 vías Parker 230 V 50/60 Hz</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> ELV-PRK-3V</li>
+              <li><strong>Cuerpo:</strong> Latón para grupo de erogación</li>
+              <li><strong>Bobina:</strong> 9 W / 230 V AC, conexión DIN</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Electroválvula 3 vías Parker 230 V 50/60 Hz (Ref: ELV-PRK-3V). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Ducha de precisión IMS E61 60 mm · Ref. DCH-IMS-E61. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="duchas" data-busqueda="duchas e61 ims precision faema ducha de precisión ims e61 60 mm dch-ims-e61 dch-ims-e61 membrana de difusión de 200 µm recubrimiento nanotecnológico antiadherente ducha grupo e61 ims precision 60 mm 58 mm filtro regadera 200 antiadherente stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-duchas.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Dos duchas de acero inoxidable con perforaciones finas para el grupo de una máquina de espresso">
+              <span class="repuesto__categoria">Duchas</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">E61 · IMS Precision · Faema</p>
+              <h3>Ducha de precisión IMS E61 60 mm</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> DCH-IMS-E61</li>
+              <li><strong>Perforación:</strong> Membrana de difusión de 200 µm</li>
+              <li><strong>Acabado:</strong> Recubrimiento nanotecnológico antiadherente</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Ducha de precisión IMS E61 60 mm (Ref: DCH-IMS-E61). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+
+          <!-- EJEMPLO: Portafiltro completo 2 salidas mango negro · Ref. VAR-PTF-2S. Datos del demo; imagen ilustrativa (IA). -->
+          <article class="card repuesto" data-reveal data-item data-categoria="varios" data-busqueda="varios universal 58 mm portafiltro completo 2 salidas mango negro var-ptf-2s var-ptf-2s opciones de 5.5 mm y 6 mm para varias marcas filtro cesto 14 g + muelle de retención portafiltro 2 salidas mango negro tamper manometro doble escala 58 mm cesto 14 g 5.5 6 mm stock disponible">
+            <div class="card__media">
+              <img src="assets/img/repuesto-varios.webp" width="900" height="600" loading="lazy" decoding="async"
+                   alt="Portafiltro de mango negro con filtro cesto, manómetro y tamper de acero inoxidable">
+              <span class="repuesto__categoria">Varios</span>
+              <span class="repuesto__ilustrativa">Imagen ilustrativa</span>
+              <span class="repuesto__stock repuesto__stock--disponible">Stock disponible</span>
+            </div>
+            <div class="card__body">
+              <p class="repuesto__marcas">Universal · 58 mm</p>
+              <h3>Portafiltro completo 2 salidas mango negro</h3>
+              <ul class="datos">
+              <li><strong>Ref:</strong> VAR-PTF-2S</li>
+              <li><strong>Orejuelas:</strong> Opciones de 5.5 mm y 6 mm para varias marcas</li>
+              <li><strong>Incluye:</strong> Filtro cesto 14 g + muelle de retención</li>
+              </ul>
+              <a class="btn btn--wa" data-wa-message="Hola, estoy interesado en el repuesto: Portafiltro completo 2 salidas mango negro (Ref: VAR-PTF-2S). Me gustaría recibir información sobre disponibilidad y precio."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Se muestra solo cuando ningún repuesto cumple los filtros -->
+        <div class="vacio" data-vacio hidden>
+          <h3>No encontramos repuestos con esos filtros</h3>
+          <p>Prueba con otra búsqueda, o escríbenos y te ayudamos a localizar la pieza que necesitas.</p>
+          <div class="vacio__acciones">
+            <button type="button" class="btn btn--borde" data-limpiar>Limpiar filtros</button>
+            <a class="btn btn--wa" data-wa-message="Hola, estoy buscando un repuesto y no lo encuentro en el catálogo. Quisiera recibir asistencia."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ¿NO ENCUENTRAS EL REPUESTO? ============ -->
+    <!-- EJEMPLO: se omitió "piezas importadas bajo pedido" del demo (no confirmado). -->
+    <section class="seccion banda" aria-labelledby="titulo-asesoria">
+      <div class="wrap">
+        <div class="asesoria" data-reveal>
+          <div>
+            <h2 id="titulo-asesoria">¿No encuentras el repuesto que buscas?</h2>
+            <p>Envíanos la fotografía de la pieza o el modelo exacto de tu máquina y te ayudamos a localizarla.</p>
+          </div>
+          <div class="asesoria__acciones">
+            <a class="btn btn--wa" data-wa-message="Hola, busco un repuesto específico y requiero asistencia. Puedo enviar la fotografía de la pieza o el modelo de mi máquina."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar con un técnico</a>
+            <a class="btn btn--borde" href="servicio-tecnico.html">Servicio técnico</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: lo inserta layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts: el ORDEN importa. filters.js va al final: solo necesita que el HTML esté cargado. -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/icons/sprite.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
+</body>
+</html>

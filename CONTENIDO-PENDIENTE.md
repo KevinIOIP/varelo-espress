@@ -39,3 +39,12 @@ En el código está marcado con el comentario `EJEMPLO`.
 - [ ] Crear `sitemap.xml` y `robots.txt` con la URL real (incluye `cafe.html`)
 - [ ] JSON-LD de `index.html`: agregar `url`, `sameAs` (redes) y `openingHours`
 - [ ] JSON-LD de `cafe.html`: agregar la URL absoluta en cada elemento de la ruta
+
+## Comercial — Repuestos (`repuestos.html`)
+- [ ] Los 9 repuestos, sus referencias (CCH-CPK-64, EMP-SIL-85, VLV-VAP-RN, ELE-PRS-SIR3P, CNT-VOL-GMM, BOT-MEM-5T, ELV-PRK-3V, DCH-IMS-E61, VAR-PTF-2S) y sus medidas: confirmar que existen y que las referencias son reales
+- [ ] Estado de stock: 8 "Stock disponible" y 1 "Bajo pedido" (botonera). Es un dato que cambia: decidir si se mantiene en la web o se quita la etiqueta y se confirma por WhatsApp
+- [ ] Marcas compatibles de cada repuesto (Compak, Astoria, Gaggia, Wega, Rancilio, Nuova Simonelli, Sirai, Giemme, Ceme, Faema, La Marzocco, Parker, ODE, IMS Precision, E61)
+- [ ] Marcas citadas en el hero (La Marzocco, Rancilio, Nuova Simonelli, Faema, Astoria, Gaggia)
+- [ ] Se omitieron del demo "originales", "principales marcas del mercado", "piezas importadas bajo pedido" y "envíos nacionales": confirmar si se pueden afirmar
+- [ ] Las 9 categorías (Cuchillas, Empaques de grupo, Válvulas vapor/agua, Eléctricos, Contadores volumétricos, Botoneras, Electroválvulas, Duchas, Varios)
+- [ ] Imágenes: las 9 de las tarjetas y la del hero son ilustrativas (IA) y NO corresponden a las piezas reales (p. ej., el presostato de la imagen no tiene los mismos terminales que el modelo indicado). Al poner fotos reales, borrar la etiqueta "Imagen ilustrativa" (`repuesto__ilustrativa`) de cada tarjeta

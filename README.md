@@ -19,6 +19,8 @@ Toda la interacción comercial ocurre por WhatsApp. No hay carrito, pagos, cuent
 | Iconos                                        | `assets/icons/sprite.js`           |
 | Mensaje que arma cada formulario              | `assets/js/forms.js` → `CONSTRUCTORES` |
 | Datos de ejemplo por reemplazar               | `CONTENIDO-PENDIENTE.md`           |
+| Agregar o quitar un repuesto | `repuestos.html` (copiar una `<article class="card repuesto">` completa y cambiar `data-categoria`, `data-busqueda` y `data-wa-message`) |
+| Agregar una categoría de repuestos | `repuestos.html` (nuevo `<button class="pildora" data-valor="...">` en el grupo de filtros) |
 
 ## Cómo funciona un botón de WhatsApp
 Cualquier enlace `<a>` con el atributo `data-wa-message` se convierte solo en un enlace de WhatsApp:
@@ -38,9 +40,9 @@ Cada página debe llevar `<body data-page="...">` con su id (inicio, cafe, alqui
 |---|---|---|
 | Inicio | `index.html` | ✔ |
 | Café | `cafe.html` | ✔ |
-| Alquiler de máquinas | `alquiler-de-maquinas.html` | pendiente |
-| Venta de máquinas | `venta-de-maquinas.html` | pendiente |
-| Repuestos | `repuestos.html` | pendiente |
+| Alquiler de máquinas | `alquiler-de-maquinas.html` | ✔ |
+| Venta de máquinas | `venta-de-maquinas.html` | ✔ |
+| Repuestos | `repuestos.html` | ✔ |
 | Servicio técnico | `servicio-tecnico.html` | pendiente |
 | Nosotros | `nosotros.html` | pendiente |
 
@@ -68,3 +70,4 @@ Cada página debe llevar `<body data-page="...">` con su id (inicio, cafe, alqui
 - [ ] Catálogo sin máquinas de 3 grupos, aunque Alquiler ofrece un plan de 3 grupos
 - [ ] Imágenes: las 4 de las tarjetas y la del hero son ilustrativas (IA). Al poner fotos reales, borrar la etiqueta "Imagen ilustrativa" (`maquina__ilustrativa`) de cada tarjeta
 - [ ] Marcas que se muestran en el catálogo vs. marcas de la sección "Equipos de referencia" del Inicio (son listas distintas en los demos)
+
