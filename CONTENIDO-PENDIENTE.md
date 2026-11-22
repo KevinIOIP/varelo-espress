@@ -62,3 +62,16 @@ En el código está marcado con el comentario `EJEMPLO`.
   - [ ] "Evaluación técnica integral" → "Evaluación técnica"
 - [ ] Zona de cobertura del servicio técnico en Bogotá (¿a domicilio, en taller o ambos?): el demo dice "en tu barra o taller"
 - [ ] Imagen `hero-servicio-*.webp` (generada con IA)
+
+## Comercial — Nosotros (`nosotros.html`)  ⚠ TODO ES DE EJEMPLO
+Esta página se hizo para mostrar el diseño. Ningún texto ni cifra está confirmado. Reemplazar o eliminar ANTES de publicar:
+- [ ] Historia ("Nacimos del amor por una buena taza de café"): texto provisional, sin fechas
+- [ ] Cifra "+10 años de experiencia": INVENTADA. Reemplazar por el dato real o eliminar la tarjeta
+- [ ] Cifra "+200 clientes atendidos": INVENTADA. Reemplazar por el dato real o eliminar la tarjeta
+- [ ] Cifras "5 líneas de servicio" y "9 categorías de repuestos": salen del propio sitio; actualizarlas si cambian el catálogo o los servicios
+- [ ] Misión y visión: textos provisionales
+- [ ] Valores (Pasión por el café, Calidad, Cercanía, Respaldo técnico)
+- [ ] "Cómo trabajamos" (4 pasos): confirmar que describe el proceso real
+- [ ] "Un solo equipo para café, máquinas y soporte técnico": confirmar
+- [ ] Imágenes `hero-nosotros-*.webp` y `nosotros-historia.webp` (generadas con IA): reemplazar por fotos reales del local, el equipo o el taller
+- [ ] Equipo: la página NO muestra personas ni nombres; si se quiere agregar una sección de equipo, hacerlo con fotos y nombres reales

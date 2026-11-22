@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción ÚNICOS por página -->
+  <title>Nosotros | Varelo Espress, café y máquinas espresso en Bogotá</title>
+  <meta name="description" content="Conoce a Varelo Espress: una empresa de Bogotá apasionada por el café, con venta de café, alquiler y venta de máquinas, repuestos y servicio técnico en un solo lugar.">
+  <meta name="theme-color" content="#0B0705">
+
+  <!-- Open Graph (vista previa al compartir el enlace) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Varelo Espress">
+  <meta property="og:title" content="Nosotros | Varelo Espress">
+  <meta property="og:description" content="Pasión por el café y respaldo para tu negocio: café, máquinas, repuestos y servicio técnico en Bogotá.">
+  <!-- PENDIENTE (cuando exista el dominio): descomentar y poner la URL real.
+  <link rel="canonical" href="https://TU-DOMINIO/nosotros.html">
+  <meta property="og:url" content="https://TU-DOMINIO/nosotros.html">
+  <meta property="og:image" content="https://TU-DOMINIO/assets/img/hero-nosotros-1600.webp">
+  -->
+
+  <!-- Iconos de la pestaña -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Google Fonts: Playfair Display (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600..700&display=swap" rel="stylesheet">
+
+  <!-- Estilos: el orden importa (base → componentes → página) -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Imagen principal: se pide cuanto antes -->
+  <link rel="preload" as="image" href="assets/img/hero-nosotros-1600.webp" imagesrcset="assets/img/hero-nosotros-900.webp 900w, assets/img/hero-nosotros-1600.webp 1600w" imagesizes="100vw">
+
+  <!-- Datos estructurados: ruta de navegación (BreadcrumbList).
+       PENDIENTE: agregar las URLs absolutas ("item") cuando exista el dominio. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio" },
+      { "@type": "ListItem", "position": 2, "name": "Nosotros" }
+    ]
+  }
+  </script>
+</head>
+
+<body data-page="nosotros">
+
+  <!-- Header: lo inserta layout.js. El <noscript> es el respaldo si JavaScript está apagado -->
+  <div id="site-header">
+    <noscript>
+      <nav aria-label="Principal" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="index.html">Inicio</a><a href="cafe.html">Café</a><a href="alquiler-de-maquinas.html">Alquiler</a><a href="venta-de-maquinas.html">Máquinas</a><a href="repuestos.html">Repuestos</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a>
+      </nav>
+    </noscript>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- =====================================================================
+         IMPORTANTE — TODO EL CONTENIDO DE ESTA PÁGINA ES DE EJEMPLO.
+         La historia, las cifras, la misión, la visión y los valores son textos
+         provisionales para mostrar el diseño. Se reemplazan por los reales
+         (ver CONTENIDO-PENDIENTE.md) ANTES de publicar el sitio.
+         ===================================================================== -->
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--interna" aria-labelledby="titulo-hero">
+      <div class="hero__media">
+        <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia) -->
+        <img src="assets/img/hero-nosotros-1600.webp"
+             srcset="assets/img/hero-nosotros-900.webp 900w, assets/img/hero-nosotros-1600.webp 1600w"
+             sizes="100vw" width="1600" height="1067" fetchpriority="high"
+             alt="Barista sirviendo leche vaporizada sobre un espresso para formar arte latte junto a una máquina de café">
+      </div>
+      <div class="wrap">
+        <div class="hero__content">
+          <p class="eyebrow">Sobre nosotros</p>
+          <h1 id="titulo-hero">Pasión por el café, <em>respaldo</em> para tu negocio</h1>
+          <p class="hero__lead">En Varelo Espress acompañamos a cafeterías, restaurantes y oficinas de Bogotá con café, máquinas, repuestos y servicio técnico, todo en un solo lugar.</p>
+          <div class="hero__acciones">
+            <a class="btn btn--oro" href="#historia">Conoce nuestra historia <svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HISTORIA ============ -->
+    <!-- EJEMPLO: texto provisional. Sin fechas ni cifras, para no afirmar datos que no están confirmados. -->
+    <section class="seccion" id="historia" aria-labelledby="titulo-historia">
+      <div class="wrap nos-historia">
+        <div class="nos-historia__texto" data-reveal>
+          <p class="eyebrow">Quiénes somos</p>
+          <h2 id="titulo-historia">Nacimos del amor por una buena taza de café</h2>
+          <p>Varelo Espress es una empresa bogotana dedicada al mundo del café espresso. Empezamos con una idea sencilla: que cada negocio pueda contar con buen café, buenas máquinas y alguien confiable que responda cuando las necesita.</p>
+          <p>Hoy reunimos en un mismo lugar la venta de café, el alquiler y la venta de máquinas, los repuestos y el servicio técnico, para que cada cliente resuelva todo con un solo contacto.</p>
+          <ul class="check-list nos-historia__lista">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Un solo equipo para café, máquinas y soporte técnico</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Atención directa y cercana por WhatsApp</li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Asesoría para elegir lo que de verdad necesitas</li>
+          </ul>
+        </div>
+
+        <figure class="nos-media" data-reveal>
+          <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia del local o del equipo) -->
+          <img src="assets/img/nosotros-historia.webp" width="1000" height="800" loading="lazy" decoding="async"
+               alt="Taza de espresso con crema dorada junto a una cuchara de latón con granos de café y un tamper sobre una mesa de madera oscura">
+          <figcaption class="nos-media__badge"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Bogotá, Colombia</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CIFRAS ============ -->
+    <!-- EJEMPLO: las cifras de "años" y "clientes" son inventadas para el diseño. REEMPLAZAR por datos reales
+         o ELIMINAR la tarjeta antes de publicar. Las otras dos salen del propio sitio (5 líneas de servicio, 9 categorías de repuestos).
+         Para cambiar una cifra: edita data-contar, el número visible y el texto del <span class="sr-only">. -->
+    <section class="seccion banda nos-cifras" aria-label="Varelo Espress en cifras">
+      <div class="wrap">
+        <ul class="nos-cifras__grid">
+          <li class="nos-cifra" data-reveal>
+            <strong class="nos-cifra__num"><span class="sr-only">Más de 10</span><span aria-hidden="true">+<span data-contar="10">10</span></span></strong>
+            <span class="nos-cifra__txt">Años de experiencia</span>
+          </li>
+          <li class="nos-cifra" data-reveal>
+            <strong class="nos-cifra__num"><span class="sr-only">Más de 200</span><span aria-hidden="true">+<span data-contar="200">200</span></span></strong>
+            <span class="nos-cifra__txt">Clientes atendidos</span>
+          </li>
+          <li class="nos-cifra" data-reveal>
+            <strong class="nos-cifra__num"><span class="sr-only">5</span><span aria-hidden="true"><span data-contar="5">5</span></span></strong>
+            <span class="nos-cifra__txt">Líneas de servicio</span>
+          </li>
+          <li class="nos-cifra" data-reveal>
+            <strong class="nos-cifra__num"><span class="sr-only">9</span><span aria-hidden="true"><span data-contar="9">9</span></span></strong>
+            <span class="nos-cifra__txt">Categorías de repuestos</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ MISIÓN Y VISIÓN ============ -->
+    <!-- EJEMPLO: textos provisionales -->
+    <section class="seccion" aria-labelledby="titulo-mv">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Hacia dónde vamos</p>
+          <h2 id="titulo-mv">Nuestra misión y visión</h2>
+        </div>
+        <div class="nos-mv">
+          <article class="nos-mv__card" data-reveal>
+            <span class="nos-mv__icon"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></span>
+            <h3>Misión</h3>
+            <p>Acompañar a cafeterías, restaurantes y oficinas con café de calidad, equipos confiables y soporte técnico oportuno, para que cada taza servida refleje el cuidado de quien la prepara.</p>
+          </article>
+          <article class="nos-mv__card" data-reveal>
+            <span class="nos-mv__icon"><svg class="ico" aria-hidden="true"><use href="#i-eye"/></svg></span>
+            <h3>Visión</h3>
+            <p>Ser el aliado de referencia en café y equipos espresso en Bogotá, reconocido por la cercanía, la calidad y el respaldo que damos a cada cliente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALORES (cuadrícula tipo bento) ============ -->
+    <!-- EJEMPLO: valores provisionales. Para agregar uno, copia una <article class="nos-valor"> completa;
+         la clase nos-valor--ancho hace que la tarjeta ocupe dos columnas. -->
+    <section class="seccion banda" aria-labelledby="titulo-valores">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Lo que nos define</p>
+          <h2 id="titulo-valores">Nuestros valores</h2>
+          <p>Así entendemos el trabajo con cada cliente.</p>
+        </div>
+        <div class="nos-valores">
+          <article class="nos-valor nos-valor--ancho nos-valor--destacado" data-reveal>
+            <span class="nos-valor__icon"><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg></span>
+            <h3>Pasión por el café</h3>
+            <p>El café es el centro de todo lo que hacemos. Lo conocemos, lo cuidamos y lo compartimos con quien lo prepara y con quien lo disfruta.</p>
+          </article>
+          <article class="nos-valor" data-reveal>
+            <span class="nos-valor__icon"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <h3>Calidad</h3>
+            <p>Cuidamos cada detalle, del grano a la máquina.</p>
+          </article>
+          <article class="nos-valor" data-reveal>
+            <span class="nos-valor__icon"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3>Cercanía</h3>
+            <p>Una conversación directa, sin intermediarios.</p>
+          </article>
+          <article class="nos-valor nos-valor--ancho" data-reveal>
+            <span class="nos-valor__icon"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <h3>Respaldo técnico</h3>
+            <p>Acompañamos tus equipos antes, durante y después de la compra o el alquiler, para que tu negocio no se detenga.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUÉ HACEMOS ============ -->
+    <section class="seccion" aria-labelledby="titulo-hacemos">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Todo en un solo lugar</p>
+          <h2 id="titulo-hacemos">Lo que hacemos por tu negocio</h2>
+        </div>
+        <div class="nos-tiles">
+          <a class="nos-tile" href="cafe.html" data-reveal>
+            <span class="nos-tile__icon"><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg></span>
+            <h3>Café</h3>
+            <p>Paquetes por libras y perfiles de tueste.</p>
+            <span class="nos-tile__more" aria-hidden="true">Ver más <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="nos-tile" href="alquiler-de-maquinas.html" data-reveal>
+            <span class="nos-tile__icon"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <h3>Alquiler de máquinas</h3>
+            <p>Planes según la operación de tu negocio.</p>
+            <span class="nos-tile__more" aria-hidden="true">Ver más <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="nos-tile" href="venta-de-maquinas.html" data-reveal>
+            <span class="nos-tile__icon"><svg class="ico" aria-hidden="true"><use href="#i-machine"/></svg></span>
+            <h3>Venta de máquinas</h3>
+            <p>Catálogo con filtros y consulta de disponibilidad.</p>
+            <span class="nos-tile__more" aria-hidden="true">Ver más <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="nos-tile" href="repuestos.html" data-reveal>
+            <span class="nos-tile__icon"><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg></span>
+            <h3>Repuestos</h3>
+            <p>Piezas por categoría y por referencia.</p>
+            <span class="nos-tile__more" aria-hidden="true">Ver más <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="nos-tile" href="servicio-tecnico.html" data-reveal>
+            <span class="nos-tile__icon"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <h3>Servicio técnico</h3>
+            <p>Mantenimiento y reparación de tu máquina.</p>
+            <span class="nos-tile__more" aria-hidden="true">Ver más <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CÓMO TRABAJAMOS ============ -->
+    <!-- EJEMPLO: pasos provisionales -->
+    <section class="seccion banda" aria-labelledby="titulo-proceso">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Así trabajamos</p>
+          <h2 id="titulo-proceso">De tu primer mensaje a tu primera taza</h2>
+        </div>
+        <ol class="nos-proceso">
+          <li class="nos-paso" data-reveal>
+            <span class="nos-paso__num" aria-hidden="true">1</span>
+            <h3>Escríbenos</h3>
+            <p>Cuéntanos por WhatsApp qué necesitas: café, una máquina, un repuesto o una revisión.</p>
+          </li>
+          <li class="nos-paso" data-reveal>
+            <span class="nos-paso__num" aria-hidden="true">2</span>
+            <h3>Entendemos tu caso</h3>
+            <p>Te hacemos las preguntas justas para conocer tu negocio y tu forma de trabajar.</p>
+          </li>
+          <li class="nos-paso" data-reveal>
+            <span class="nos-paso__num" aria-hidden="true">3</span>
+            <h3>Te proponemos una solución</h3>
+            <p>Te recomendamos la opción que mejor se ajusta a lo que necesitas.</p>
+          </li>
+          <li class="nos-paso" data-reveal>
+            <span class="nos-paso__num" aria-hidden="true">4</span>
+            <h3>Te acompañamos</h3>
+            <p>Seguimos a tu lado con soporte técnico y atención directa cuando nos necesites.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ LLAMADO FINAL ============ -->
+    <section class="seccion cta-final" aria-labelledby="titulo-cta">
+      <div class="wrap" data-reveal>
+        <h2 id="titulo-cta">Conversemos sobre tu negocio</h2>
+        <p>Cuéntanos qué necesitas y continuamos la conversación por WhatsApp.</p>
+        <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: lo inserta layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts: el ORDEN importa. contadores.js solo anima las cifras de esta página. -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/icons/sprite.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/contadores.js" defer></script>
+</body>
+</html>

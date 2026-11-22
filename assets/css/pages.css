@@ -1067,3 +1067,396 @@
     align-self: stretch
   }
 }
+
+/* --- Historia: texto + foto con marco dorado desplazado --- */
+.nos-historia {
+  display: grid;
+  gap: 2.8rem;
+  grid-template-columns: 1fr;
+  align-items: center
+}
+
+@media (min-width:900px) {
+  .nos-historia {
+    grid-template-columns: 1.05fr .95fr;
+    gap: 4.5rem
+  }
+}
+
+.nos-historia__texto h2 {
+  margin: .6rem 0 1.2rem
+}
+
+.nos-historia__texto p {
+  max-width: 56ch;
+  margin-bottom: 1rem;
+  color: var(--texto-suave)
+}
+
+.nos-historia__lista {
+  margin-top: 1.6rem
+}
+
+.nos-media {
+  position: relative;
+  isolation: isolate;
+  margin: 0
+}
+
+.nos-media::before {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  z-index: -1;
+  border: 1.5px solid var(--oro-profundo);
+  border-radius: calc(var(--radio) * 1.6)
+}
+
+.nos-media img {
+  width: 100%;
+  aspect-ratio: 5/4;
+  object-fit: cover;
+  border-radius: calc(var(--radio) * 1.6);
+  box-shadow: var(--sombra)
+}
+
+.nos-media__badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem 1rem;
+  border: 1px solid rgba(216, 161, 100, .4);
+  border-radius: 999px;
+  background: rgba(11, 7, 5, .78);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: var(--crema);
+  font-size: .9rem;
+  font-weight: 600
+}
+
+.nos-media__badge .ico {
+  color: var(--oro)
+}
+
+/* --- Cifras: 2 columnas (móvil) · 4 columnas (escritorio) --- */
+.nos-cifras {
+  padding: 3.2rem 0
+}
+
+.nos-cifras__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr)
+}
+
+@media (min-width:900px) {
+  .nos-cifras__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem
+  }
+}
+
+.nos-cifra {
+  padding: 1.8rem 1rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: rgba(255, 255, 255, .03);
+  text-align: center
+}
+
+.nos-cifra__num {
+  display: block;
+  font-family: var(--fuente-titulo);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1;
+  background: var(--gradiente-oro);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent
+}
+
+.nos-cifra__txt {
+  display: block;
+  margin-top: .75rem;
+  font-size: .92rem;
+  color: var(--texto-suave)
+}
+
+/* --- Misión y visión --- */
+.nos-mv {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr
+}
+
+@media (min-width:768px) {
+  .nos-mv {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+.nos-mv__card {
+  position: relative;
+  overflow: hidden;
+  padding: 2.1rem 1.7rem;
+  border: 1px solid var(--borde);
+  border-radius: calc(var(--radio) * 1.4);
+  background: radial-gradient(420px 200px at 100% 0%, rgba(216, 161, 100, .12), transparent 70%), var(--superficie)
+}
+
+.nos-mv__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--gradiente-oro)
+}
+
+.nos-mv__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.2rem;
+  border-radius: 16px;
+  background: var(--gradiente-oro);
+  color: #1a1008
+}
+
+.nos-mv__icon .ico {
+  width: 28px;
+  height: 28px
+}
+
+.nos-mv__card h3 {
+  margin-bottom: .6rem;
+  font-size: 1.5rem
+}
+
+.nos-mv__card p {
+  color: var(--texto-suave)
+}
+
+/* --- Valores: cuadrícula tipo bento (la clase --ancho ocupa 2 columnas) --- */
+.nos-valores {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr
+}
+
+@media (min-width:640px) {
+  .nos-valores {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .nos-valor--ancho {
+    grid-column: span 2
+  }
+}
+
+@media (min-width:1024px) {
+  .nos-valores {
+    grid-template-columns: repeat(3, 1fr)
+  }
+}
+
+.nos-valor {
+  padding: 1.9rem 1.6rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  transition: transform .25s, border-color .25s, box-shadow .25s
+}
+
+.nos-valor:hover {
+  transform: translateY(-4px);
+  border-color: var(--oro-profundo);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .45)
+}
+
+.nos-valor--destacado {
+  border-color: var(--oro-profundo);
+  background: radial-gradient(480px 220px at 0% 0%, rgba(216, 161, 100, .16), transparent 70%), var(--superficie)
+}
+
+.nos-valor__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1.1rem;
+  border: 1px solid rgba(216, 161, 100, .3);
+  border-radius: 14px;
+  background: rgba(216, 161, 100, .12);
+  color: var(--oro)
+}
+
+.nos-valor__icon .ico {
+  width: 26px;
+  height: 26px
+}
+
+.nos-valor h3 {
+  margin-bottom: .45rem;
+  font-size: 1.3rem
+}
+
+.nos-valor p {
+  max-width: 56ch;
+  font-size: .97rem;
+  color: var(--texto-suave)
+}
+
+/* --- Lo que hacemos: 1 col · 2 col · 5 col --- */
+.nos-tiles {
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 1fr
+}
+
+@media (min-width:640px) {
+  .nos-tiles {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .nos-tile:last-child {
+    grid-column: 1/-1
+  }
+}
+
+@media (min-width:1024px) {
+  .nos-tiles {
+    grid-template-columns: repeat(5, 1fr)
+  }
+
+  .nos-tile:last-child {
+    grid-column: auto
+  }
+}
+
+.nos-tile {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  padding: 1.5rem 1.3rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  transition: transform .25s, border-color .25s, background .25s
+}
+
+.nos-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--oro-profundo);
+  background: var(--superficie-2)
+}
+
+.nos-tile__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(216, 161, 100, .3);
+  border-radius: 12px;
+  background: rgba(216, 161, 100, .12);
+  color: var(--oro)
+}
+
+.nos-tile h3 {
+  font-size: 1.1rem
+}
+
+.nos-tile p {
+  flex: 1;
+  font-size: .92rem;
+  color: var(--texto-suave)
+}
+
+.nos-tile__more {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .3rem;
+  color: var(--oro);
+  font-size: .9rem;
+  font-weight: 600;
+  transition: gap .2s, color .2s
+}
+
+.nos-tile:hover .nos-tile__more {
+  gap: .7rem;
+  color: var(--oro-claro)
+}
+
+/* --- Cómo trabajamos: línea de tiempo vertical (móvil) y horizontal (escritorio) --- */
+.nos-proceso {
+  position: relative;
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: 1fr
+}
+
+.nos-proceso::before {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: linear-gradient(var(--oro-profundo), rgba(156, 108, 60, .15))
+}
+
+.nos-paso {
+  position: relative;
+  padding-left: 4rem
+}
+
+.nos-paso__num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradiente-oro);
+  color: #1a1008;
+  font: 700 1.05rem var(--fuente-titulo)
+}
+
+.nos-paso h3 {
+  margin-bottom: .4rem;
+  font-size: 1.1rem
+}
+
+.nos-paso p {
+  font-size: .94rem;
+  color: var(--texto-suave)
+}
+
+@media (min-width:900px) {
+  .nos-proceso {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem
+  }
+
+  .nos-proceso::before {
+    left: 22px;
+    right: 22px;
+    top: 21px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--oro-profundo), rgba(156, 108, 60, .15))
+  }
+
+  .nos-paso {
+    padding: 4rem 0 0
+  }
+}

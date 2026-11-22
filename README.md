@@ -21,6 +21,8 @@ Toda la interacción comercial ocurre por WhatsApp. No hay carrito, pagos, cuent
 | Datos de ejemplo por reemplazar               | `CONTENIDO-PENDIENTE.md`           |
 | Agregar o quitar un repuesto | `repuestos.html` (copiar una `<article class="card repuesto">` completa y cambiar `data-categoria`, `data-busqueda` y `data-wa-message`) |
 | Agregar una categoría de repuestos | `repuestos.html` (nuevo `<button class="pildora" data-valor="...">` en el grupo de filtros) |
+| Cifras de Nosotros | `nosotros.html` (atributo `data-contar`, el número visible y el `<span class="sr-only">`) |
+
 
 ## Cómo funciona un botón de WhatsApp
 Cualquier enlace `<a>` con el atributo `data-wa-message` se convierte solo en un enlace de WhatsApp:
@@ -34,6 +36,7 @@ la función `CONSTRUCTORES.cafe`. No se guarda ni se envía nada a ningún servi
 ## Orden de los scripts (importante)
 `config.js` → `sprite.js` → `whatsapp.js` → `layout.js` → `nav.js` → `reveal.js` → `forms.js` (solo páginas con formulario)
 Cada página debe llevar `<body data-page="...">` con su id (inicio, cafe, alquiler, maquinas, repuestos, servicio, nosotros).
+`contadores.js` (solo en nosotros.html): anima las cifras. Se carga al final, después de reveal.js.
 
 ## Páginas
 | Página | Archivo | Estado |
@@ -44,7 +47,7 @@ Cada página debe llevar `<body data-page="...">` con su id (inicio, cafe, alqui
 | Venta de máquinas | `venta-de-maquinas.html` | ✔ |
 | Repuestos | `repuestos.html` | ✔ |
 | Servicio técnico | `servicio-tecnico.html` | ✔ |
-| Nosotros | `nosotros.html` | pendiente |
+| Nosotros | `nosotros.html` | ✔ | (Contenido de ejemplo)
 
 ## Comercial — Alquiler (`alquiler-de-maquinas.html`)
 - [ ] Tamaños de 1, 2 y 3 grupos y su capacidad (50-70, 90-120 y 150+ bebidas por hora)
