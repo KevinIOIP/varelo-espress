@@ -850,3 +850,220 @@
   font-weight: 600;
   color: var(--crema)
 }
+/* --- Formulario: los campos de texto se ven igual que los títulos de los pasos --- */
+.alq .campo{margin-bottom:1.7rem}
+.alq .campo label{font-size:.98rem;font-weight:600;color:var(--crema)}
+.alq .campo--ultimo{margin-bottom:0}
+.campo__opcional{font-weight:400;color:var(--texto-suave)}
+.campo textarea{min-height:110px;resize:vertical;line-height:1.5}
+.campo textarea:hover{border-color:var(--oro-profundo)}
+.campo textarea:focus{outline:none;border-color:var(--oro);box-shadow:0 0 0 3px rgba(216,161,100,.28)}
+.campo textarea.invalido{border-color:#ff7a62}
+
+/* --- Opción "Urgente": acento rojo suave dentro de la paleta oscura --- */
+.opcion--urgente .opcion__caja strong{color:#ff9d8a}
+.opcion--urgente input:hover + .opcion__caja{border-color:#ff8a80}
+.opcion--urgente input:checked + .opcion__caja{border-color:#ff8a80;background:rgba(255,138,128,.14);box-shadow:0 0 0 1px #ff8a80}
+
+/* --- Banner de emergencias --- */
+.emergencia{display:flex;align-items:center;justify-content:space-between;gap:1.8rem;padding:2.2rem 2rem;border:1px solid rgba(255,138,128,.45);border-radius:calc(var(--radio) * 1.5);background:linear-gradient(100deg,#2b0f0b 0%,#47170f 100%);box-shadow:0 12px 30px rgba(192,57,43,.2)}
+.emergencia h2{display:flex;align-items:center;gap:.7rem;margin-bottom:.55rem;font-size:clamp(1.3rem,2.6vw,1.8rem)}
+.emergencia h2 .ico{width:28px;height:28px;color:#ff8a80}
+.emergencia p{max-width:58ch;color:#f2d7d5}
+.emergencia .btn{flex:none}
+@media (max-width:899px){
+  .emergencia{flex-direction:column;align-items:flex-start;padding:1.8rem 1.4rem}
+  .emergencia .btn{width:100%}
+}
+
+/* --- Servicios técnicos: 1 col (móvil) · 2 col (escritorio) --- */
+.srvs{display:grid;gap:1.4rem;grid-template-columns:1fr}
+@media (min-width:900px){.srvs{grid-template-columns:repeat(2,1fr)}}
+.srv{display:flex;gap:1.2rem;padding:1.7rem 1.5rem;border:1px solid var(--borde);border-radius:var(--radio);background:var(--superficie);transition:transform .25s,border-color .25s,box-shadow .25s}
+.srv:hover{transform:translateY(-4px);border-color:var(--oro-profundo);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.srv__icon{flex:none;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;color:var(--oro);background:rgba(216,161,100,.12);border:1px solid rgba(216,161,100,.3)}
+.srv__icon .ico{width:26px;height:26px}
+.srv__body{display:flex;flex-direction:column;gap:.7rem;min-width:0}
+.srv__body p{flex:1;color:var(--texto-suave);font-size:.95rem}
+.srv__body .btn{align-self:flex-start;margin-top:.3rem}
+@media (max-width:479px){
+  .srv{flex-direction:column}
+  .srv__body .btn{align-self:stretch}
+}
+
+/* --- Formulario: los campos de texto se ven igual que los títulos de los pasos --- */
+.alq .campo {
+  margin-bottom: 1.7rem
+}
+
+.alq .campo label {
+  font-size: .98rem;
+  font-weight: 600;
+  color: var(--crema)
+}
+
+.alq .campo--ultimo {
+  margin-bottom: 0
+}
+
+.campo__opcional {
+  font-weight: 400;
+  color: var(--texto-suave)
+}
+
+.campo textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5
+}
+
+.campo textarea:hover {
+  border-color: var(--oro-profundo)
+}
+
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--oro);
+  box-shadow: 0 0 0 3px rgba(216, 161, 100, .28)
+}
+
+.campo textarea.invalido {
+  border-color: #ff7a62
+}
+
+/* --- Opción "Urgente": acento rojo suave dentro de la paleta oscura --- */
+.opcion--urgente .opcion__caja strong {
+  color: #ff9d8a
+}
+
+.opcion--urgente input:hover+.opcion__caja {
+  border-color: #ff8a80
+}
+
+.opcion--urgente input:checked+.opcion__caja {
+  border-color: #ff8a80;
+  background: rgba(255, 138, 128, .14);
+  box-shadow: 0 0 0 1px #ff8a80
+}
+
+/* --- Banner de emergencias --- */
+.emergencia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.8rem;
+  padding: 2.2rem 2rem;
+  border: 1px solid rgba(255, 138, 128, .45);
+  border-radius: calc(var(--radio) * 1.5);
+  background: linear-gradient(100deg, #2b0f0b 0%, #47170f 100%);
+  box-shadow: 0 12px 30px rgba(192, 57, 43, .2)
+}
+
+.emergencia h2 {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin-bottom: .55rem;
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem)
+}
+
+.emergencia h2 .ico {
+  width: 28px;
+  height: 28px;
+  color: #ff8a80
+}
+
+.emergencia p {
+  max-width: 58ch;
+  color: #f2d7d5
+}
+
+.emergencia .btn {
+  flex: none
+}
+
+@media (max-width:899px) {
+  .emergencia {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.8rem 1.4rem
+  }
+
+  .emergencia .btn {
+    width: 100%
+  }
+}
+
+/* --- Servicios técnicos: 1 col (móvil) · 2 col (escritorio) --- */
+.srvs {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: 1fr
+}
+
+@media (min-width:900px) {
+  .srvs {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+.srv {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.7rem 1.5rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie);
+  transition: transform .25s, border-color .25s, box-shadow .25s
+}
+
+.srv:hover {
+  transform: translateY(-4px);
+  border-color: var(--oro-profundo);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .45)
+}
+
+.srv__icon {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--oro);
+  background: rgba(216, 161, 100, .12);
+  border: 1px solid rgba(216, 161, 100, .3)
+}
+
+.srv__icon .ico {
+  width: 26px;
+  height: 26px
+}
+
+.srv__body {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  min-width: 0
+}
+
+.srv__body p {
+  flex: 1;
+  color: var(--texto-suave);
+  font-size: .95rem
+}
+
+.srv__body .btn {
+  align-self: flex-start;
+  margin-top: .3rem
+}
+
+@media (max-width:479px) {
+  .srv {
+    flex-direction: column
+  }
+
+  .srv__body .btn {
+    align-self: stretch
+  }
+}

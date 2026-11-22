@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción ÚNICOS por página -->
+  <title>Servicio técnico para máquinas de café espresso en Bogotá | Varelo Espress</title>
+  <meta name="description" content="Mantenimiento preventivo, reparación, instalación y revisión de máquinas de café espresso en Bogotá. Solicita tu diagnóstico técnico por WhatsApp con Varelo Espress.">
+  <meta name="theme-color" content="#0B0705">
+
+  <!-- Open Graph (vista previa al compartir el enlace) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Varelo Espress">
+  <meta property="og:title" content="Servicio técnico para máquinas de café espresso | Varelo Espress">
+  <meta property="og:description" content="Mantenimiento, reparación, instalación y revisión de máquinas espresso. Solicita tu diagnóstico por WhatsApp.">
+  <!-- PENDIENTE (cuando exista el dominio): descomentar y poner la URL real.
+  <link rel="canonical" href="https://TU-DOMINIO/servicio-tecnico.html">
+  <meta property="og:url" content="https://TU-DOMINIO/servicio-tecnico.html">
+  <meta property="og:image" content="https://TU-DOMINIO/assets/img/hero-servicio-1600.webp">
+  -->
+
+  <!-- Iconos de la pestaña -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+  <!-- Google Fonts: Playfair Display (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600..700&display=swap" rel="stylesheet">
+
+  <!-- Estilos: el orden importa (base → componentes → página) -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- Imagen principal: se pide cuanto antes -->
+  <link rel="preload" as="image" href="assets/img/hero-servicio-1600.webp" imagesrcset="assets/img/hero-servicio-900.webp 900w, assets/img/hero-servicio-1600.webp 1600w" imagesizes="100vw">
+
+  <!-- Datos estructurados: ruta de navegación (BreadcrumbList).
+       PENDIENTE: agregar las URLs absolutas ("item") cuando exista el dominio. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio" },
+      { "@type": "ListItem", "position": 2, "name": "Servicio técnico" }
+    ]
+  }
+  </script>
+</head>
+
+<body data-page="servicio">
+
+  <!-- Header: lo inserta layout.js. El <noscript> es el respaldo si JavaScript está apagado -->
+  <div id="site-header">
+    <noscript>
+      <nav aria-label="Principal" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem">
+        <a href="index.html">Inicio</a><a href="cafe.html">Café</a><a href="alquiler-de-maquinas.html">Alquiler</a><a href="venta-de-maquinas.html">Máquinas</a><a href="repuestos.html">Repuestos</a><a href="servicio-tecnico.html">Servicio técnico</a><a href="nosotros.html">Nosotros</a>
+      </nav>
+    </noscript>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero--interna" aria-labelledby="titulo-hero">
+      <div class="hero__media">
+        <!-- Imagen generada con IA (EJEMPLO: reemplazar por foto propia) -->
+        <img src="assets/img/hero-servicio-1600.webp"
+             srcset="assets/img/hero-servicio-900.webp 900w, assets/img/hero-servicio-1600.webp 1600w"
+             sizes="100vw" width="1600" height="1067" fetchpriority="high"
+             alt="Técnico con guantes negros ajustando con una llave el grupo de una máquina de espresso">
+      </div>
+      <div class="wrap">
+        <div class="hero__content">
+          <p class="eyebrow">Soporte técnico de alta precisión</p>
+          <h1 id="titulo-hero">Servicio técnico especializado y <em>mantenimiento</em></h1>
+          <!-- EJEMPLO: se omitió "repuestos originales" del demo hasta confirmarlo -->
+          <p class="hero__lead">Diagnóstico preciso y soporte rápido para mantener tu negocio de café en funcionamiento. Cuéntanos qué le pasa a tu máquina y coordinamos la revisión por WhatsApp.</p>
+          <div class="hero__acciones">
+            <a class="btn btn--oro" href="#agendar">Solicitar diagnóstico técnico <svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFICIOS ============ -->
+    <!-- EJEMPLO: textos del demo, con las afirmaciones absolutas suavizadas:
+         "Repuestos originales / piezas directas de fábrica" y "sello de garantía en todos los trabajos".
+         Texto original del demo en CONTENIDO-PENDIENTE.md. -->
+    <section class="seccion" aria-label="Beneficios del servicio técnico" style="padding-bottom:0">
+      <div class="wrap">
+        <div class="beneficios beneficios--4">
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></span>
+            <div><h3>Diagnóstico especializado</h3><p>Evaluación técnica de presión, temperatura y componentes de tu máquina.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg></span>
+            <div><h3>Repuestos para tu máquina</h3><p>Cambio de piezas y consumibles para distintas marcas de máquinas espresso.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></span>
+            <div><h3>Respuesta rápida</h3><p>Atención prioritaria para mantener tu barra de café operativa.</p></div>
+          </div>
+          <div class="beneficio" data-reveal>
+            <span class="beneficio__icon"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <div><h3>Garantía de servicio</h3><p>Consulta las condiciones de garantía de cada trabajo de reparación.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMULARIO DE DIAGNÓSTICO ============ -->
+    <!-- No envía datos a ningún servidor: assets/js/forms.js valida, actualiza el resumen y abre WhatsApp
+         con el mensaje armado (constructor "servicio" en forms.js).
+         Los campos son: servicio, maquina, negocio, urgencia y detalles. Si cambias un "name", cámbialo también en forms.js.
+         EJEMPLO: tipos de servicio, tipos de establecimiento y niveles de urgencia vienen del demo.
+         Cada opción de radio lleva data-resumen="..." (texto que aparece en el resumen y en el mensaje). -->
+    <section class="seccion" id="agendar" aria-labelledby="titulo-agendar">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Atención personalizada en tu barra o taller</p>
+          <h2 id="titulo-agendar">Formulario de diagnóstico técnico</h2>
+          <p>Selecciona el tipo de servicio, cuéntanos la falla y te escribiremos por WhatsApp para coordinar la revisión.</p>
+        </div>
+
+        <form class="alq" id="servicio-form" data-wa-form="servicio" novalidate data-reveal>
+          <div class="alq__opcionesbox">
+
+            <fieldset class="alq__paso">
+              <legend>1. Tipo de servicio</legend>
+              <div class="alq__opciones alq__opciones--2">
+                <div class="opcion">
+                  <input type="radio" id="srv-servicio-preventivo" name="servicio" value="preventivo" data-resumen="Mantenimiento preventivo" checked>
+                  <label class="opcion__caja" for="srv-servicio-preventivo"><strong>Preventivo</strong><small>Limpieza y calibración</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="srv-servicio-reparacion" name="servicio" value="reparacion" data-resumen="Reparación por falla o avería">
+                  <label class="opcion__caja" for="srv-servicio-reparacion"><strong>Reparación</strong><small>Falla o avería técnica</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="srv-servicio-instalacion" name="servicio" value="instalacion" data-resumen="Instalación y calibración">
+                  <label class="opcion__caja" for="srv-servicio-instalacion"><strong>Instalación</strong><small>Montaje y puesta a punto</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="srv-servicio-revision" name="servicio" value="revision" data-resumen="Revisión general">
+                  <label class="opcion__caja" for="srv-servicio-revision"><strong>Revisión</strong><small>Diagnóstico completo</small></label>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="campo">
+              <label for="srv-maquina">2. Marca y modelo de la máquina <span class="campo__opcional">(opcional)</span></label>
+              <input id="srv-maquina" name="maquina" type="text" maxlength="80" autocomplete="off"
+                     placeholder="Ej.: Astoria, Gaggia…" aria-describedby="srv-maquina-error">
+              <span class="campo__error" id="srv-maquina-error" aria-live="polite"></span>
+            </div>
+
+            <div class="campo">
+              <label for="srv-negocio">3. Tipo de establecimiento</label>
+              <select id="srv-negocio" name="negocio" required aria-describedby="srv-negocio-error">
+                <option value="cafeteria">Cafetería / Restaurante</option>
+                <option value="oficina">Oficina</option>
+                <option value="movil">Negocio móvil / Carrito</option>
+                <option value="personal">Uso personal</option>
+              </select>
+              <span class="campo__error" id="srv-negocio-error" aria-live="polite"></span>
+            </div>
+
+            <fieldset class="alq__paso">
+              <legend>4. Nivel de urgencia</legend>
+              <div class="alq__opciones alq__opciones--3">
+                <div class="opcion">
+                  <input type="radio" id="srv-urgencia-programado" name="urgencia" value="programado" data-resumen="Programado / rutinario" checked>
+                  <label class="opcion__caja" for="srv-urgencia-programado"><strong>Programado</strong><small>Sin afán inmediato</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" id="srv-urgencia-pronto" name="urgencia" value="pronto" data-resumen="En 2-3 días">
+                  <label class="opcion__caja" for="srv-urgencia-pronto"><strong>2-3 días</strong><small>Atención pronta</small></label>
+                </div>
+                <div class="opcion opcion--urgente">
+                  <input type="radio" id="srv-urgencia-urgente" name="urgencia" value="urgente" data-resumen="Urgente (falla crítica)">
+                  <label class="opcion__caja" for="srv-urgencia-urgente"><strong>Urgente</strong><small>Máquina detenida</small></label>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="campo campo--ultimo">
+              <label for="srv-detalles">5. Detalles del problema o síntomas <span class="campo__opcional">(opcional)</span></label>
+              <textarea id="srv-detalles" name="detalles" rows="4" maxlength="300"
+                        placeholder="Describe brevemente qué ocurre (fugas de agua, no calienta, baja presión de vapor, ruidos extraños…)"
+                        aria-describedby="srv-detalles-ayuda srv-detalles-error"></textarea>
+              <span class="campo__ayuda" id="srv-detalles-ayuda">Máximo 300 caracteres.</span>
+              <span class="campo__error" id="srv-detalles-error" aria-live="polite"></span>
+            </div>
+
+          </div>
+
+          <aside class="alq__resumen" aria-labelledby="titulo-resumen">
+            <h3 id="titulo-resumen">Resumen de la solicitud</h3>
+            <dl class="resumen" aria-live="polite">
+              <div><dt>Servicio</dt><dd data-resumen-de="servicio">Mantenimiento preventivo</dd></div>
+              <div><dt>Urgencia</dt><dd data-resumen-de="urgencia">Programado / rutinario</dd></div>
+              <div><dt>Negocio</dt><dd data-resumen-de="negocio">Cafetería / Restaurante</dd></div>
+              <div><dt>Máquina</dt><dd data-resumen-de="maquina" data-vacio="No especificada">No especificada</dd></div>
+            </dl>
+            <p class="alq__nota"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Continuaremos la conversación por WhatsApp para coordinar la revisión.</p>
+            <button class="btn btn--wa btn--block" type="submit"><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Enviar diagnóstico por WhatsApp</button>
+            <p class="form__estado" data-form-estado role="status" aria-live="polite"></p>
+          </aside>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ EMERGENCIAS ============ -->
+    <!-- EJEMPLO: el demo decía "Atención de emergencias 24/7" y "servicio prioritario". Se omitió "24/7"
+         hasta confirmar el horario real de atención (ver CONTENIDO-PENDIENTE.md). -->
+    <section class="seccion" style="padding-top:0" aria-labelledby="titulo-emergencia">
+      <div class="wrap">
+        <div class="emergencia" data-reveal>
+          <div>
+            <h2 id="titulo-emergencia"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg>Atención de emergencias</h2>
+            <p>¿Tu máquina dejó de funcionar en plena jornada de trabajo? Escríbenos y revisamos tu caso con prioridad: las fallas críticas son las que más afectan la venta de tu establecimiento.</p>
+          </div>
+          <a class="btn btn--wa" data-wa-message="Hola, ¡EMERGENCIA! Mi máquina de café sufrió una falla crítica en plena operación y necesito asistencia."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Emergencia por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS TÉCNICOS ============ -->
+    <!-- EJEMPLO: los 4 servicios, sus descripciones y etiquetas vienen del demo y NO están confirmados.
+         Cada tarjeta tiene su propio mensaje de WhatsApp. -->
+    <section class="seccion banda" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Especialidades a tu disposición</p>
+          <h2 id="titulo-servicios">Nuestros servicios técnicos</h2>
+        </div>
+        <div class="srvs">
+
+          <article class="srv" data-reveal>
+            <span class="srv__icon"><svg class="ico" aria-hidden="true"><use href="#i-gear"/></svg></span>
+            <div class="srv__body">
+              <h3>Mantenimiento preventivo</h3>
+              <p>Limpieza integral de caldera, ajuste y calibración de presostatos, descalcificación ligera y regulación del flujo de erogación.</p>
+              <ul class="chips"><li class="chip">Calibración</li><li class="chip">Ajuste de presión</li><li class="chip">Preventivo</li></ul>
+              <a class="btn btn--wa btn--sm" data-wa-message="Hola, quiero información sobre el servicio de mantenimiento preventivo para mi máquina de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar este servicio</a>
+            </div>
+          </article>
+
+          <article class="srv" data-reveal>
+            <span class="srv__icon"><svg class="ico" aria-hidden="true"><use href="#i-flask"/></svg></span>
+            <div class="srv__body">
+              <h3>Descalcificación profunda</h3>
+              <p>Tratamiento químico especializado para eliminar depósitos de sarro y minerales en caldera, intercambiadores y tuberías de cobre.</p>
+              <ul class="chips"><li class="chip">Desobstrucción</li><li class="chip">Limpieza de caldera</li></ul>
+              <a class="btn btn--wa btn--sm" data-wa-message="Hola, quiero información sobre el servicio de descalcificación profunda para mi máquina de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar este servicio</a>
+            </div>
+          </article>
+
+          <article class="srv" data-reveal>
+            <span class="srv__icon"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></span>
+            <div class="srv__body">
+              <h3>Reparación eléctrica e hidráulica</h3>
+              <p>Reemplazo y reparación de electroválvulas de 3 vías, bombas volumétricas, elementos calefactores, presostatos y tarjetas electrónicas.</p>
+              <ul class="chips"><li class="chip">Electroválvulas</li><li class="chip">Bombas</li><li class="chip">Placas</li></ul>
+              <a class="btn btn--wa btn--sm" data-wa-message="Hola, quiero información sobre el servicio de reparación eléctrica e hidráulica para mi máquina de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar este servicio</a>
+            </div>
+          </article>
+
+          <article class="srv" data-reveal>
+            <span class="srv__icon"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <div class="srv__body">
+              <h3>Cambio de consumibles y repuestos</h3>
+              <p>Sustitución rutinaria de empaques de grupo en silicona, duchas de precisión, juntas de lanceta de vapor y filtros internos.</p>
+              <ul class="chips"><li class="chip">Empaques</li><li class="chip">Duchas IMS</li><li class="chip">Lancetas</li></ul>
+              <a class="btn btn--wa btn--sm" data-wa-message="Hola, quiero información sobre el cambio de consumibles y repuestos para mi máquina de café."><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Consultar este servicio</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LLAMADO FINAL ============ -->
+    <section class="seccion cta-final" aria-labelledby="titulo-cta">
+      <div class="wrap" data-reveal>
+        <h2 id="titulo-cta">¿Necesitas ayuda con tu máquina?</h2>
+        <p>Escríbenos y continuamos la conversación por WhatsApp.</p>
+        <a class="btn btn--wa" data-wa-message=""><svg class="ico ico--wa" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: lo inserta layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts: el ORDEN importa. forms.js va al final porque usa whatsapp.js. -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/icons/sprite.js" defer></script>
+  <script src="assets/js/whatsapp.js" defer></script>
+  <script src="assets/js/layout.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/reveal.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>
